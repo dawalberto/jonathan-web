@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti&display=swap');
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.bgHome {
+    background-image: url("./images/foto1bg.jpg");
+
+    /* Set a specific height */
+    min-height: 100vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgHome nav {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.bgHome nav ul {
+    font-family: 'Calligraffitti', cursive;
+    margin: 0;
+    list-style: none;
+}
+
+.bgHome nav ul li {
+    display: inline;
+    margin-right: 3rem;
+    font-size: 2rem;
+}
+
+.bgHome nav ul li a {
+    text-decoration: none;
+    color: black;
+}
