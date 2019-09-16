@@ -28,16 +28,21 @@ body {
 .bgHome nav {
     padding-top: 3rem;
     text-align: center;
+    display: none;
 }
 
 .bgHome nav ul {
     font-family: 'Calligraffitti', cursive;
     margin: 0;
     list-style: none;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    /* TODO menu borroso en chrome */
 }
 
 .bgHome nav ul li {
-    display: inline;
+    display: block;
     margin-right: 3rem;
     font-size: 2rem;
 }
@@ -46,3 +51,33 @@ body {
     text-decoration: none;
     color: black;
 }
+
+.iconMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 960px) {
+
+    .bgHome nav {
+        display: block;
+    }
+
+    .bgHome nav ul {
+        position: initial;
+        left: initial;
+        transform: initial;
+    }
+
+    .bgHome nav ul li {
+        display: inline;
+    }
+
+    .iconMenu {
+        display: none;
+    }
+
+  }
