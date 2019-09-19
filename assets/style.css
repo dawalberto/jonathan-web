@@ -2,6 +2,7 @@
 
 body {
     margin: 0;
+    /* background: black; */
 }
 
 .container {
@@ -74,14 +75,19 @@ body {
     border-color: lightslategrey;
 }
 
-.inicioImg img {
+.inicioImg img, .noticiasImg img, .contactoImg img {
     max-width: 100%;
+}
+
+.contactoImg {
+    background-color: black;
 }
 
 .inicio {
     padding: 2rem;
     font-size: 1.8em;
     font-family: 'Satisfy', cursive;
+    /* background-color: white; */
 }
 
 .videos {
@@ -144,6 +150,101 @@ iframe {
     vertical-align: bottom;
 }
 
+.noticias, .contacto {
+    background-color: white;
+
+}
+
+.contacto img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.contacto .icon-clasicaguitarra, .contacto .icon-gmail {
+    width: 4.6rem;
+    height: 4.6rem;
+}
+
+.contacto div.contacto-grid {
+    margin-top: 8rem;
+    display: grid;
+    grid-template-columns: 40% 50%;
+    gap: 1rem;
+}
+
+.contacto div.contacto-grid img, .contacto div.contacto-grid a {
+    align-self: center;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.contacto div.contacto-grid img {
+    justify-self: end;
+}
+
+.contacto div.contacto-grid a {
+    justify-self: start;
+    /* font-family: 'Calligraffitti', cursive; */
+    font-family: 'Satisfy', cursive;
+    color: gray;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.contacto div.contacto-grid a:hover {
+    color: #8BB7F0;
+    font-size: 2rem;
+    border-bottom: 1px solid;
+}
+
+.footer {
+    background-image: url("./images/bg-llamas-humo-5.jpg");
+    /* max-width: 1500px; Ya veremos si lo dejo*/
+    margin: auto;
+    /* Set a specific height */
+    min-height: 50vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.icon-up {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem 1rem 0;
+    cursor: pointer;
+}
+
+.icon-up:hover {
+    width: 3.3rem;
+    height: 3.3rem;
+}
+
+.icon-spain, .icon-uk {
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.icon-spain {
+    right: initial;
+    left: 4rem;
+}
+
+.icon-uk {
+    right: initial;
+    left: 1rem;
+}
+
 @media (min-width: 960px) {
 
     .container {
@@ -190,7 +291,7 @@ iframe {
         display: none;
     }
 
-    .inicioImg {
+    .inicioImg, .noticiasImg, .contactoImg {
         position: sticky;
         position: -webkit-sticky;
         top: 0;
@@ -226,6 +327,16 @@ iframe {
     .container-video {
         margin: 12rem;
         padding: 16rem;
+    }
+    
+    .icon-spain {
+        left: initial;
+        right: 4rem;
+    }
+    
+    .icon-uk {
+        left: initial;
+        right: 1rem;
     }
 
   }
