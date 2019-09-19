@@ -5,4 +5,6 @@ function toogleNav() {
 
 Galleria.loadTheme('librerias/galleria/themes/classic/galleria.classic.min.js')
 
-Galleria.run('.galleria')
+Galleria.run('.galleria', {
+  autoplay: 3000
+})
