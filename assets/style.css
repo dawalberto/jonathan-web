@@ -29,7 +29,6 @@ body {
 }
 
 .bgHome nav {
-    padding-top: 3rem;
     text-align: center;
     display: none;
 }
@@ -41,7 +40,11 @@ body {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    z-index: 90;
+    background-color: rgba(128, 128, 128, 0.836);
+    width: 100%;
+    height: 100vh;
+    padding-top: 3rem;
     /* TODO menu borroso en chrome */
 }
 
@@ -166,25 +169,24 @@ iframe {
 }
 
 .contacto div.contacto-grid {
-    margin-top: 8rem;
+    margin-top: 2rem;
     display: grid;
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 100%;
     gap: 0;
 }
 
 .contacto div.contacto-grid img, .contacto div.contacto-grid a {
     align-self: center;
-    justify-self: center;
     margin-top: 1rem;
 }
 
 .contacto div.contacto-grid img {
-    justify-self: end;
+    justify-self: center;
     padding-right: 1rem;
 }
 
 .contacto div.contacto-grid a {
-    justify-self: start;
+    justify-self: center;
     /* font-family: 'Calligraffitti', cursive; */
     font-family: 'Satisfy', cursive;
     color: gray;
@@ -233,7 +235,7 @@ iframe {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
-    z-index: 10;
+    z-index: 99;
 }
 
 .icon-spain {
@@ -260,6 +262,8 @@ iframe {
         position: initial;
         left: initial;
         transform: initial;
+        background-color: initial;
+        width: initial;
     }
 
     .bgHome nav ul li {
@@ -338,6 +342,19 @@ iframe {
     .icon-uk {
         left: initial;
         right: 1rem;
+    }
+
+    .contacto div.contacto-grid {
+        margin-top: 8rem;
+        grid-template-columns: 35% auto;
+    }
+
+    .contacto div.contacto-grid img {
+        justify-self: end;
+    }
+    
+    .contacto div.contacto-grid a {
+        justify-self: start;
     }
 
   }
