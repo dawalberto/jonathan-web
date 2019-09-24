@@ -114,12 +114,14 @@ function showAndHiddenElements() {
   let iconBackToTop = document.getElementById('iconBackToTop')
   let navMenu = document.getElementById('navMenu')
 
-  if (pageYOffset < 900) {
+  if (pageYOffset < 850) {
     iconBackToTop.style.visibility = 'hidden'
     navMenu.style.backgroundColor = 'transparent'
+    navMenu.style.border = 'none'
   } else {
     iconBackToTop.style.visibility = 'visible'
-    navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'
+    navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.850)'
+    navMenu.style.borderBottom = '1.5px solid white'
   }
 
 }
@@ -162,3 +164,10 @@ function onLoad() {
   onImagesLoaded(container, hiddenPantallaBloqueo)
 
 }
+
+function onClickLink() {
+  let navMenu = document.getElementById('navMenu')
+  window.innerWidth <= 960 ? navMenu.style.display = 'none' : ''
+}
+
+// alert(window.innerWidth)

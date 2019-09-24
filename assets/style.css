@@ -46,7 +46,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     z-index: 90;
-    background-color: rgba(128, 128, 128, 0.836);
+    background-color: rgba(0, 0, 0, 0.900);
     width: 100%;
     height: 100vh;
     padding-top: 3rem;
@@ -57,12 +57,14 @@ html {
     display: block;
     margin-right: 3rem;
     font-size: 2rem;
+    border-bottom: 1px solid white;
+    padding: 1rem;
 }
 
 .bgHome nav ul li a {
     text-decoration: none;
     color: white;
-    display: inline-block;
+    display: block;
     position: relative;
 }
 
@@ -322,13 +324,18 @@ iframe {
         transform: initial;
         background-color: initial;
         width: initial;
-        /* background-color: rgba(0, 0, 0, 0.8); */
         height: initial;
         padding-bottom: 2rem;
     }
 
     .bgHome nav ul li {
         display: inline;
+        border: none;
+        padding: initial;
+    }
+
+    .bgHome nav ul li a {
+        display: inline-block;
     }
 
     a.linkMenu:after {
