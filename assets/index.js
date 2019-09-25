@@ -14,13 +14,13 @@ function changeLanguage(lan) {
   let linkInicio = document.getElementById('linkInicio')
   let linkGaleria = document.getElementById('linkGaleria')
   let linkVideos = document.getElementById('linkVideos')
-  let linkNoticias = document.getElementById('linkNoticias')
+  let linkAgenda = document.getElementById('linkAgenda')
   let linkContacto = document.getElementById('linkContacto')
 
   let titleBiografia = document.getElementById('titleBiografia')
   let titleGaleria = document.getElementById('titleGaleria')
   let titleVideos = document.getElementById('titleVideos')
-  let titleNoticias = document.getElementById('titleNoticias')
+  let titleAgenda = document.getElementById('titleAgenda')
   let titleContacto = document.getElementById('titleContacto')
 
   let biop1 = document.getElementById('biop1')
@@ -29,19 +29,23 @@ function changeLanguage(lan) {
   let biop4 = document.getElementById('biop4')
   let biop5 = document.getElementById('biop5')
 
+  let p1agenda = document.getElementById('p1agenda')
+  let p2agenda = document.getElementById('p2agenda')
+  let p3agenda = document.getElementById('p3agenda')
+
   switch (lan) {
 
     case 'en':
         linkInicio.textContent = 'Home'
         linkGaleria.textContent = 'Gallery'
         linkVideos.textContent = 'Videos'
-        linkNoticias.textContent = 'News'
+        linkAgenda.textContent = 'Diary'
         linkContacto.textContent = 'Contact'
     
         titleBiografia.textContent = 'Biography'
         titleGaleria.textContent = 'Gallery'
         titleVideos.textContent = 'Videos'
-        titleNoticias.textContent = 'News'
+        titleAgenda.textContent = 'Diary'
         titleContacto.textContent = 'Contact and Social networks'
     
         biop1.textContent = `His great talent, versatility and mastery of the different periods of the repertoire for 
@@ -65,18 +69,22 @@ function changeLanguage(lan) {
                              and Antonio Clavel at the conservatories of Villena and Oscar Esplá in Alicante, he obtains the superior 
                              title in guitar with Honors. Guitarists like Carles Trepat, Aniello Desiderio, Carlos Bonell … 
                              have recognized and admired the way they play.`
+
+        p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
+        p2agenda.textContent = 'Follow him and find out all his concerts and events.'
+        p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
         break
     case 'es':
         linkInicio.textContent = 'Inicio'
         linkGaleria.textContent = 'Galeria'
         linkVideos.textContent = 'Videos'
-        linkNoticias.textContent = 'Noticias'
+        linkAgenda.textContent = 'Agenda'
         linkContacto.textContent = 'Contacto'
     
         titleBiografia.textContent = 'Biografía'
         titleGaleria.textContent = 'Galeria'
         titleVideos.textContent = 'Videos'
-        titleNoticias.textContent = 'Noticias'
+        titleAgenda.textContent = 'Agenda'
         titleContacto.textContent = 'Contacto y Redes Sociales'
     
         biop1.textContent = `Ganador del Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018 (Primer Premio) 
@@ -99,6 +107,10 @@ function changeLanguage(lan) {
         biop5.textContent = `Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, Victor Bravo y Antonio 
                              Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                              de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.`
+
+        p1agenda.textContent = 'No te pierdas ni un solo consierto de Jonathan Esteve.'
+        p2agenda.textContent = 'Siguelo y enterate de todos sus conciertos y acontecimientos.'
+        p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
         break
 
   }
@@ -113,15 +125,20 @@ function showAndHiddenElements() {
 
   let iconBackToTop = document.getElementById('iconBackToTop')
   let navMenu = document.getElementById('navMenu')
+  let ulNavMenu = document.getElementById('ulNavMenu')
 
   if (pageYOffset < 850) {
     iconBackToTop.style.visibility = 'hidden'
     navMenu.style.backgroundColor = 'transparent'
     navMenu.style.border = 'none'
+    ulNavMenu.style.paddingBottom = '2rem'
+    ulNavMenu.style.paddingTop = '3rem'
   } else {
     iconBackToTop.style.visibility = 'visible'
     navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.850)'
     navMenu.style.borderBottom = '1.5px solid white'
+    ulNavMenu.style.paddingBottom = '1rem'
+    ulNavMenu.style.paddingTop = '1.5rem'
   }
 
 }

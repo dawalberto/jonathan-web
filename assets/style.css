@@ -3,6 +3,7 @@
 body {
     margin: 0;
     /* background: black; */
+    color: #263238;
 }
 
 html {
@@ -85,7 +86,7 @@ html {
     border-color: lightslategrey;
 }
 
-.inicioImg img, .noticiasImg img, .contactoImg img {
+.inicioImg img, .agendaImg img, .contactoImg img {
     max-width: 100%;
 }
 
@@ -160,7 +161,7 @@ iframe {
     vertical-align: bottom;
 }
 
-.noticias, .contacto {
+.agenda, .contacto {
     background-color: white;
 
 }
@@ -177,14 +178,19 @@ iframe {
 
 .contacto div.contacto-grid {
     margin-top: 2rem;
+    margin-bottom: 3rem;
     display: grid;
     grid-template-columns: 100%;
     gap: 0;
 }
 
+.contacto div.contacto-grid img:first-of-type, .contacto div.contacto-grid a:first-of-type {
+    margin-top: 0;
+}
+
 .contacto div.contacto-grid img, .contacto div.contacto-grid a {
     align-self: center;
-    margin-top: 1rem;
+    margin-top: 3.5rem;
 }
 
 .contacto div.contacto-grid img {
@@ -199,9 +205,10 @@ iframe {
     color: gray;
     font-size: 2rem;
     text-decoration: none;
+    border-bottom: 1px solid transparent;
 }
 
-.contacto div.contacto-grid a:hover {
+.contacto div.contacto-grid a:hover, .agenda a:hover {
     color: #8BB7F0;
     font-size: 2rem;
     border-bottom: 1px solid;
@@ -293,18 +300,63 @@ iframe {
 #pantallaBloqueo h1 {
     margin-bottom: 5rem;
     color: white;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Satisfy', cursive;
 }
 
 #pantallaBloqueo h2 {
     margin-top: 5rem;
     color: white;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Satisfy', cursive;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.agenda #imgDisco {
+    display: block;
+    margin: 2rem auto 2rem auto;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.agenda #imgFace {
+    display: block;
+    margin: 2rem auto 0.5rem auto;
+}
+
+.agenda p, .agenda a {
+    font-size: 1.8em;
+    font-family: 'Satisfy', cursive;
+    margin: 2rem 3rem;
+}
+
+.agenda a {
+    font-family: 'Satisfy', cursive;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+    font-size: 2rem;
+    margin: 0 2rem 4rem 2rem;
+    border-bottom: 1px solid transparent;
+}
+
+div.titleBgHome {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.titleBgHome h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 100;
+}
 
 @media (min-width: 960px) {
 
@@ -364,7 +416,7 @@ iframe {
         display: none;
     }
 
-    .inicioImg, .noticiasImg, .contactoImg {
+    .inicioImg, .agendaImg, .contactoImg {
         position: sticky;
         position: -webkit-sticky;
         top: 0;
@@ -398,8 +450,12 @@ iframe {
     }
 
     .container-video {
-        margin: 12rem;
+        margin: 6rem;
         padding: 16rem;
+    }
+
+    div.container-video:first-of-type {
+        margin: 3rem 6rem 6rem 6rem;
     }
     
     .icon-spain {
@@ -413,7 +469,6 @@ iframe {
     }
 
     .contacto div.contacto-grid {
-        margin-top: 8rem;
         grid-template-columns: 35% auto;
     }
 
@@ -423,6 +478,10 @@ iframe {
     
     .contacto div.contacto-grid a {
         justify-self: start;
+    }
+
+    div.titleBgHome {
+        display: initial;
     }
 
   }

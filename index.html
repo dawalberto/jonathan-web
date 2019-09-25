@@ -5,27 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jonathan-project</title>
+    <link rel="icon" type="image/png" href="./assets/icons/icons8-guitarra-128.png" />
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body onload="onLoad()">
     <div id="pantallaBloqueo">
         <h1>Jonathan Esteve Aranda</h1>
         <img src="./assets/icons/icons8-guitar.svg" alt="">
-        <h2>- Guitarrista Clásico -</h2>
+        <h2>- Guitarrista Clásico - <br> - Classical Guitarist -</h2>
     </div>
     <img src="./assets/icons/espain.png" class="icon-spain" onclick="changeLanguage('es')" alt="">
     <img src="./assets/icons/reino-unido.png" class="icon-uk" onclick="changeLanguage('en')" alt="">
     <div class="bgHome">
         <span class="iconMenu" onclick="toogleNav()"><img src="./assets/icons/icons8-guitar.svg" alt=""></span>
         <nav id="navMenu">
-            <ul>
+            <ul id="ulNavMenu">
                 <li><a onclick="onClickLink()" id="linkInicio"class="linkMenu" href="#inicio">Inicio</a></li>
                 <li><a onclick="onClickLink()" id="linkGaleria" class="linkMenu" href="#galeria">Galeria</a></li>
                 <li><a onclick="onClickLink()" id="linkVideos" class="linkMenu" href="#first-video">Videos</a></li>
-                <li><a onclick="onClickLink()" id="linkNoticias" class="linkMenu" href="#noticias">Noticias</a></li>
+                <li><a onclick="onClickLink()" id="linkAgenda" class="linkMenu" href="#agenda">Agenda</a></li>
                 <li><a onclick="onClickLink()" id="linkContacto" class="linkMenu" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        <div class="titleBgHome">
+            <h1>Jonathan Esteve Aranda</h1>
+        </div>
     </div>
 
     <div class="container">
@@ -56,20 +60,20 @@
         <div id="galeria" class="galeria col-1-2 row-2">
             <h1 id="titleGaleria" class="text-center title">Galeria</h1>
             <div class="galleria">
-                <img src="./assets/images/galeria/1.jpg" alt="">
-                <img src="./assets/images/galeria/2.jpg" alt="">
-                <img src="./assets/images/galeria/3.jpg" alt="">
-                <img src="./assets/images/galeria/4.jpg" alt="">
-                <img src="./assets/images/galeria/5.jpg" alt="">
-                <img src="./assets/images/galeria/6.jpg" alt="">
-                <img src="./assets/images/galeria/7.jpg" alt="">
-                <img src="./assets/images/galeria/8.jpg" alt="">
-                <img src="./assets/images/galeria/9.jpg" alt="">
-                <img src="./assets/images/galeria/10.jpg" alt="">
-                <img src="./assets/images/galeria/11.jpg" alt="">
-                <img src="./assets/images/galeria/12.jpg" alt="">
-                <img src="./assets/images/galeria/13.jpg" alt="">
-                <img src="./assets/images/galeria/14.jpg" alt="">
+                <img src="./assets/images/galeria/1-min.jpg" alt="">
+                <img src="./assets/images/galeria/2-min.jpg" alt="">
+                <img src="./assets/images/galeria/3-min.jpg" alt="">
+                <img src="./assets/images/galeria/4-min.jpg" alt="">
+                <img src="./assets/images/galeria/5-min.jpg" alt="">
+                <img src="./assets/images/galeria/6-min.jpg" alt="">
+                <img src="./assets/images/galeria/7-min.jpg" alt="">
+                <img src="./assets/images/galeria/8-min.jpg" alt="">
+                <img src="./assets/images/galeria/9-min.jpg" alt="">
+                <img src="./assets/images/galeria/10-min.jpg" alt="">
+                <img src="./assets/images/galeria/11-min.jpg" alt="">
+                <img src="./assets/images/galeria/12-min.jpg" alt="">
+                <img src="./assets/images/galeria/13-min.jpg" alt="">
+                <img src="./assets/images/galeria/14-min.jpg" alt="">
             </div>
         </div>
         <div id="videos" class="videos col-1-2 row-3">
@@ -108,10 +112,16 @@
                 </iframe>
             </div>
         </div>
-        <div id="noticias" class="noticias row-4">
-            <h1 id="titleNoticias" class="text-center title">Noticias</h1>
+        <div id="agenda" class="agenda row-4">
+            <h1 id="titleAgenda" class="text-center title">Agenda</h1>
+            <p id="p1agenda" class="text-center">No te pierdas ni un solo consierto de Jonathan Esteve.</p>
+            <p id="p2agenda" class="text-center">Siguelo y enterate de todos sus conciertos y acontecimientos.</p>
+            <img id="imgDisco" src="./assets/icons/icons8-cd-100.png" alt="">
+            <p id="p3agenda" class="text-center">En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.</p>
+            <img id="imgFace" src="./assets/icons/icons8-facebook-nuevo-100.png" alt="">
+            <a href="https://www.facebook.com/Jonathan-Esteve-Aranda-Classical-Guitarist-1410717555869368/" target="_blank">Jonathan Estheve Aranda</a>
         </div>
-        <div class="noticiasImg row-4"><img src="./assets/images/foto2.jpg" alt=""></div>
+        <div class="agendaImg row-4"><img src="./assets/images/foto2.jpg" alt=""></div>
         <div class="contactoImg row-5"><img src="./assets/images/foto4.jpg" alt=""></div>
         <div id="contacto" class="contacto row-5">
             <h1 id="titleContacto" class="text-center title">Contacto y Redes</h1>
@@ -133,6 +143,7 @@
     <!-- Librerias de terceros -->
     <script src="./librerias/jquery-3.4.1.min.js"></script>
     <script src="./librerias/galleria/galleria.min.js"></script>
+    <!-- La mayoría de iconos utilizados son de https://iconos8.es/icons -->
     <!-- Mis scripts -->
     <script src="./assets/index.js"></script>
 </body>
