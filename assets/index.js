@@ -9,9 +9,12 @@ Galleria.run('.galleria', {
   autoplay: 3000
 })
 
+$.klAnimate()
+
 function changeLanguage(lan) {
 
   let linkInicio = document.getElementById('linkInicio')
+  let linkBiografia = document.getElementById('linkBiografia')
   let linkGaleria = document.getElementById('linkGaleria')
   let linkVideos = document.getElementById('linkVideos')
   let linkAgenda = document.getElementById('linkAgenda')
@@ -33,10 +36,21 @@ function changeLanguage(lan) {
   let p2agenda = document.getElementById('p2agenda')
   let p3agenda = document.getElementById('p3agenda')
 
+  let fLinkInicio = document.getElementById('fLinkInicio')
+  let fLinkBiografia = document.getElementById('fLinkBiografia')
+  let fLinkGaleria = document.getElementById('fLinkGaleria')
+  let fLinkVideos = document.getElementById('fLinkVideos')
+  let fLinkAgenda = document.getElementById('fLinkAgenda')
+  let fLinkContacto = document.getElementById('fLinkContacto')
+
+  let fLinkEspa = document.getElementById('fLinkEspa')
+  let fLinkIng = document.getElementById('fLinkIng')
+
   switch (lan) {
 
     case 'en':
         linkInicio.textContent = 'Home'
+        linkBiografia.textContent = 'Biography'
         linkGaleria.textContent = 'Gallery'
         linkVideos.textContent = 'Videos'
         linkAgenda.textContent = 'Diary'
@@ -73,9 +87,20 @@ function changeLanguage(lan) {
         p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
         p2agenda.textContent = 'Follow him and find out all his concerts and events.'
         p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
+        
+        fLinkInicio.textContent = 'Home'
+        fLinkBiografia.textContent = 'Biography'
+        fLinkGaleria.textContent = 'Gallery'
+        fLinkVideos.textContent = 'Videos'
+        fLinkAgenda.textContent = 'Diary'
+        fLinkContacto.textContent = 'Contact'
+
+        fLinkEspa.textContent = 'Spanish'
+        fLinkIng.textContent = 'English'
         break
     case 'es':
         linkInicio.textContent = 'Inicio'
+        linkBiografia.textContent = 'Biografía'
         linkGaleria.textContent = 'Galeria'
         linkVideos.textContent = 'Videos'
         linkAgenda.textContent = 'Agenda'
@@ -109,8 +134,18 @@ function changeLanguage(lan) {
                              de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.`
 
         p1agenda.textContent = 'No te pierdas ni un solo consierto de Jonathan Esteve.'
-        p2agenda.textContent = 'Siguelo y enterate de todos sus conciertos y acontecimientos.'
+        p2agenda.textContent = 'Siguelo y entérate de todos sus conciertos y acontecimientos.'
         p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
+
+        fLinkInicio.textContent = 'Inicio'
+        fLinkBiografia.textContent = 'Biografía'
+        fLinkGaleria.textContent = 'Galeria'
+        fLinkVideos.textContent = 'Videos'
+        fLinkAgenda.textContent = 'Agenda'
+        fLinkContacto.textContent = 'Contacto'
+
+        fLinkEspa.textContent = 'Español'
+        fLinkIng.textContent = 'Inglés'
         break
 
   }
@@ -185,6 +220,23 @@ function onLoad() {
 function onClickLink() {
   let navMenu = document.getElementById('navMenu')
   window.innerWidth <= 960 ? navMenu.style.display = 'none' : ''
+}
+
+function playAndPauseAudio() {
+
+  let controlAudio = document.getElementById('controlAudio')
+  let audioBg = document.getElementById('audioBg')
+
+  if(controlAudio.getAttribute('custom-status') === 'pause') {
+    controlAudio.setAttribute('src', './assets/icons/icons8-pausa-50.png')
+    controlAudio.setAttribute('custom-status', 'play')
+    audioBg.play()
+  } else {
+    controlAudio.setAttribute('src', './assets/icons/icons8-play-50.png')
+    controlAudio.setAttribute('custom-status', 'pause')
+    audioBg.pause()
+  }
+
 }
 
 // alert(window.innerWidth)
