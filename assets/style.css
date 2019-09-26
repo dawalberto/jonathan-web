@@ -410,6 +410,22 @@ div.footerGrid img.iconLenguaje {
     margin: 0 0 0.5rem 0.5rem;
 }
 
+#btnPantallaBloqueo {
+    display: none;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 0.2rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem;
+}
+
+#btnPantallaBloqueo:hover {
+    color: #263238;
+    border: 2px solid #263238;
+}
+
 @media (min-width: 960px) {
 
     .container {

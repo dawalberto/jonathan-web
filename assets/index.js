@@ -210,10 +210,30 @@ function hiddenPantallaBloqueo() {
   document.getElementById('pantallaBloqueo').style.display = 'none'
 }
 
+function showBtnaToToGetIn() {
+
+  let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo')
+  let h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo')
+  let imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo')
+  let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
+
+  h1PantallaBloqueo.style.display = 'none'
+  h2PantallaBloqueo.style.display = 'none'
+  imgPantallaBloqueo.style.display = 'none'
+  btnPantallaBloqueo.style.display = 'block'
+
+}
+
+function clickBtnaToToGetIn() {
+
+  hiddenPantallaBloqueo()
+  playAndPauseAudio()
+}
+
 function onLoad() {
 
   let container = document.getElementsByTagName("body")[0];
-  onImagesLoaded(container, hiddenPantallaBloqueo)
+  onImagesLoaded(container, showBtnaToToGetIn)
 
 }
 
