@@ -84,8 +84,8 @@ function changeLanguage(lan) {
                              title in guitar with Honors. Guitarists like Carles Trepat, Aniello Desiderio, Carlos Bonell … 
                              have recognized and admired the way they play.`
 
-        p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
-        p2agenda.textContent = 'Follow him and find out all his concerts and events.'
+        // p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
+        // p2agenda.textContent = 'Follow him and find out all his concerts and events.'
         p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
         
         fLinkInicio.textContent = 'Home'
@@ -133,8 +133,8 @@ function changeLanguage(lan) {
                              Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                              de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.`
 
-        p1agenda.textContent = 'No te pierdas ni un solo consierto de Jonathan Esteve.'
-        p2agenda.textContent = 'Siguelo y entérate de todos sus conciertos y acontecimientos.'
+        // p1agenda.textContent = 'No te pierdas ni un solo concierto de Jonathan Esteve.'
+        // p2agenda.textContent = 'Sigue todos sus proyectos y acontecimientos.'
         p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
 
         fLinkInicio.textContent = 'Inicio'
