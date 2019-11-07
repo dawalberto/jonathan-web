@@ -435,6 +435,7 @@ div.footerGrid img.iconLenguaje {
     }
 
     .bgHome nav {
+        text-align: left;
         display: block;
         position: fixed;
         width: 100%;
@@ -451,14 +452,24 @@ div.footerGrid img.iconLenguaje {
     }
 
     .bgHome nav ul li {
-        display: inline;
+        display: block;
+        margin-top: 5rem;
         border: none;
         padding: initial;
     }
 
     .bgHome nav ul li a {
         display: inline-block;
+        width: 10rem;
+        /* background-color: #2D3440; */
+        border-radius: 3px;
+        padding: 0.5rem 0.5rem 0 0.5rem;
+        text-align: left;
     }
+
+    /* .bgHome nav ul li a:hover {
+        width: 12rem;
+    } */
 
     a.linkMenu:after {
         content: '';

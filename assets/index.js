@@ -168,12 +168,18 @@ function showAndHiddenElements() {
     navMenu.style.border = 'none'
     ulNavMenu.style.paddingBottom = '2rem'
     ulNavMenu.style.paddingTop = '3rem'
+    menuHome()
   } else {
     iconBackToTop.style.visibility = 'visible'
     navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.850)'
     navMenu.style.borderBottom = '1.5px solid white'
     ulNavMenu.style.paddingBottom = '1rem'
     ulNavMenu.style.paddingTop = '1.5rem'
+
+    if (navMenu.style.textAlign === 'left') {
+      menuBody()
+      console.log(navMenu.style.textAlign)
+    }
   }
 
 }
@@ -210,7 +216,7 @@ function hiddenPantallaBloqueo() {
   document.getElementById('pantallaBloqueo').style.display = 'none'
 }
 
-function showBtnaToToGetIn() {
+function showBtnToGetin() {
 
   let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo')
   let h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo')
@@ -233,7 +239,7 @@ function clickBtnaToToGetIn() {
 function onLoad() {
 
   let container = document.getElementsByTagName("body")[0];
-  onImagesLoaded(container, showBtnaToToGetIn)
+  onImagesLoaded(container, showBtnToGetin)
 
 }
 
@@ -260,3 +266,117 @@ function playAndPauseAudio() {
 }
 
 // alert(window.innerWidth)
+
+const linkInicio =  document.querySelector('#linkInicio')
+linkInicio.addEventListener('mouseover', () => {
+  linkInicio.classList.add('animated', 'pulse')
+})
+linkInicio.addEventListener('mouseout', () => {
+  linkInicio.classList.remove('animated', 'pulse')
+})
+
+const linkBiografia =  document.querySelector('#linkBiografia')
+linkBiografia.addEventListener('mouseover', () => {
+  linkBiografia.classList.add('animated', 'pulse')
+})
+linkBiografia.addEventListener('mouseout', () => {
+  linkBiografia.classList.remove('animated', 'pulse')
+})
+
+const linkGaleria =  document.querySelector('#linkGaleria')
+linkGaleria.addEventListener('mouseover', () => {
+  linkGaleria.classList.add('animated', 'pulse')
+})
+linkGaleria.addEventListener('mouseout', () => {
+  linkGaleria.classList.remove('animated', 'pulse')
+})
+
+const linkVideos =  document.querySelector('#linkVideos')
+linkVideos.addEventListener('mouseover', () => {
+  linkVideos.classList.add('animated', 'pulse')
+})
+linkVideos.addEventListener('mouseout', () => {
+  linkVideos.classList.remove('animated', 'pulse')
+})
+
+const linkAgenda =  document.querySelector('#linkAgenda')
+linkAgenda.addEventListener('mouseover', () => {
+  linkAgenda.classList.add('animated', 'pulse')
+})
+linkAgenda.addEventListener('mouseout', () => {
+  linkAgenda.classList.remove('animated', 'pulse')
+})
+
+const linkContacto =  document.querySelector('#linkContacto')
+linkContacto.addEventListener('mouseover', () => {
+  linkContacto.classList.add('animated', 'pulse')
+})
+linkContacto.addEventListener('mouseout', () => {
+  linkContacto.classList.remove('animated', 'pulse')
+})
+
+function menuHome() {
+
+  let linkInicio =  document.querySelector('#linkInicio'),
+  linkBiografia =  document.querySelector('#linkBiografia'),
+  linkGaleria =  document.querySelector('#linkGaleria'),
+  linkVideos =  document.querySelector('#linkVideos'),
+  linkAgenda =  document.querySelector('#linkAgenda'),
+  linkContacto =  document.querySelector('#linkContacto'),
+  liInicio =  document.querySelector('#liInicio'),
+  liBiografia =  document.querySelector('#liBiografia'),
+  liGaleria =  document.querySelector('#liGaleria'),
+  liVideos =  document.querySelector('#liVideos'),
+  liAgenda =  document.querySelector('#liAgenda'),
+  liContacto =  document.querySelector('#liContacto'),
+  navMenu = document.querySelector('#navMenu')
+
+  const aMenus = [linkInicio, linkBiografia, linkGaleria, linkVideos, linkAgenda, linkContacto]
+  const liMenus = [liInicio, liBiografia, liGaleria, liVideos, liAgenda, liContacto]
+
+  addStyleToElements(aMenus, 'width', '10rem')
+  addStyleToElements(aMenus, 'borderRadius', '3px')
+  addStyleToElements(aMenus, 'padding', '0.5rem 0.5rem 0 0.5rem')
+  addStyleToElements(aMenus, 'textAlign', 'left')
+  addStyleToElements(liMenus, 'display', 'block')
+  addStyleToElements(liMenus, 'marginTop', '5rem')
+  navMenu.style.textAlign = 'left'
+
+}
+
+function menuBody() {
+
+  let linkInicio =  document.querySelector('#linkInicio'),
+  linkBiografia =  document.querySelector('#linkBiografia'),
+  linkGaleria =  document.querySelector('#linkGaleria'),
+  linkVideos =  document.querySelector('#linkVideos'),
+  linkAgenda =  document.querySelector('#linkAgenda'),
+  linkContacto =  document.querySelector('#linkContacto'),
+  liInicio =  document.querySelector('#liInicio'),
+  liBiografia =  document.querySelector('#liBiografia'),
+  liGaleria =  document.querySelector('#liGaleria'),
+  liVideos =  document.querySelector('#liVideos'),
+  liAgenda =  document.querySelector('#liAgenda'),
+  liContacto =  document.querySelector('#liContacto'),
+  navMenu = document.querySelector('#navMenu')
+
+  const aMenus = [linkInicio, linkBiografia, linkGaleria, linkVideos, linkAgenda, linkContacto]
+  const liMenus = [liInicio, liBiografia, liGaleria, liVideos, liAgenda, liContacto]
+
+  addStyleToElements(aMenus, 'width', 'initial')
+  addStyleToElements(aMenus, 'borderRadius', 'none')
+  addStyleToElements(aMenus, 'padding', 'initial')
+  addStyleToElements(aMenus, 'textAlign', 'initial')
+  addStyleToElements(liMenus, 'display', 'inline')
+  addStyleToElements(liMenus, 'marginTop', 'initial')
+  navMenu.style.textAlign = 'center'
+
+}
+
+function addStyleToElements(elements, style, value) {
+
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].style[style] = value
+  }
+
+}
