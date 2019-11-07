@@ -156,11 +156,20 @@ function backToTop() {
   window.scrollTo(0, 0);
 }
 
-function showAndHiddenElements() {
+document.querySelector('#titleGaleria').style.visibility = 'hidden'
 
+function showAndHiddenElements() {
+  
   let iconBackToTop = document.getElementById('iconBackToTop')
   let navMenu = document.getElementById('navMenu')
   let ulNavMenu = document.getElementById('ulNavMenu')
+  
+  let titleGaleria =  document.querySelector('#titleGaleria')
+  
+  if (pageYOffset > (titleGaleria.offsetTop - titleGaleria.offsetHeight) - 500 && !Array.from(titleGaleria.classList).includes('animated')) {
+    document.querySelector('#titleGaleria').style.visibility = 'visible'
+    titleGaleria.classList.add('animated', 'bounceInLeft')
+  }
 
   if (pageYOffset < 850) {
     iconBackToTop.style.visibility = 'hidden'
@@ -176,10 +185,8 @@ function showAndHiddenElements() {
     ulNavMenu.style.paddingBottom = '1rem'
     ulNavMenu.style.paddingTop = '1.5rem'
 
-    if (navMenu.style.textAlign === 'left') {
+    if (navMenu.style.textAlign === 'left') 
       menuBody()
-      console.log(navMenu.style.textAlign)
-    }
   }
 
 }
@@ -230,8 +237,10 @@ function showBtnToGetin() {
 
 }
 
-function clickBtnaToToGetIn() {
+function clickBtnToGetin() {
 
+  window.scrollTo(0, 0);
+  menuHome()
   hiddenPantallaBloqueo()
   playAndPauseAudio()
 }
