@@ -1,8 +1,3 @@
-function toogleNav() {
-  let navMenu = document.getElementById('navMenu')
-  navMenu.style.display === 'block' ? navMenu.style.display = 'none' : navMenu.style.display = 'block'
-}
-
 Galleria.loadTheme('librerias/galleria/themes/classic/galleria.classic.min.js')
 
 Galleria.run('.galleria', {
@@ -11,40 +6,61 @@ Galleria.run('.galleria', {
 
 $.klAnimate()
 
+window.addEventListener('scroll', () => {
+  showAndHiddenElements()
+})
+
+document.querySelector('#titleGaleria').style.visibility = 'hidden'
+
+const aMenus = Array.from(document.getElementsByClassName('linkMenu'))
+const liMenus = Array.from(document.getElementsByClassName('liNav'))
+
+aMenus.forEach(element => {
+  addEventAnimatedStartEnd(element, 'pulse', 'mouseover', 'mouseout')
+})
+
+
+// funciones
+
+function toogleNav() {
+  let navMenu = document.getElementById('navMenu')
+  navMenu.style.display === 'block' ? navMenu.style.display = 'none' : navMenu.style.display = 'block'
+}
+
 function changeLanguage(lan) {
 
   let linkInicio = document.getElementById('linkInicio')
-  let linkBiografia = document.getElementById('linkBiografia')
-  let linkGaleria = document.getElementById('linkGaleria')
-  let linkVideos = document.getElementById('linkVideos')
-  let linkAgenda = document.getElementById('linkAgenda')
-  let linkContacto = document.getElementById('linkContacto')
+  linkBiografia = document.getElementById('linkBiografia'),
+  linkGaleria = document.getElementById('linkGaleria'),
+  linkVideos = document.getElementById('linkVideos'),
+  linkAgenda = document.getElementById('linkAgenda'),
+  linkContacto = document.getElementById('linkContacto')
 
-  let titleBiografia = document.getElementById('titleBiografia')
-  let titleGaleria = document.getElementById('titleGaleria')
-  let titleVideos = document.getElementById('titleVideos')
-  let titleAgenda = document.getElementById('titleAgenda')
-  let titleContacto = document.getElementById('titleContacto')
+  titleBiografia = document.getElementById('titleBiografia'),
+  titleGaleria = document.getElementById('titleGaleria'),
+  titleVideos = document.getElementById('titleVideos'),
+  titleAgenda = document.getElementById('titleAgenda'),
+  titleContacto = document.getElementById('titleContacto'),
 
-  let biop1 = document.getElementById('biop1')
-  let biop2 = document.getElementById('biop2')
-  let biop3 = document.getElementById('biop3')
-  let biop4 = document.getElementById('biop4')
-  let biop5 = document.getElementById('biop5')
+  biop1 = document.getElementById('biop1'),
+  biop2 = document.getElementById('biop2'),
+  biop3 = document.getElementById('biop3'),
+  biop4 = document.getElementById('biop4'),
+  biop5 = document.getElementById('biop5'),
 
-  let p1agenda = document.getElementById('p1agenda')
-  let p2agenda = document.getElementById('p2agenda')
-  let p3agenda = document.getElementById('p3agenda')
+  p1agenda = document.getElementById('p1agenda'),
+  p2agenda = document.getElementById('p2agenda'),
+  p3agenda = document.getElementById('p3agenda'),
 
-  let fLinkInicio = document.getElementById('fLinkInicio')
-  let fLinkBiografia = document.getElementById('fLinkBiografia')
-  let fLinkGaleria = document.getElementById('fLinkGaleria')
-  let fLinkVideos = document.getElementById('fLinkVideos')
-  let fLinkAgenda = document.getElementById('fLinkAgenda')
-  let fLinkContacto = document.getElementById('fLinkContacto')
+  fLinkInicio = document.getElementById('fLinkInicio'),
+  fLinkBiografia = document.getElementById('fLinkBiografia'),
+  fLinkGaleria = document.getElementById('fLinkGaleria'),
+  fLinkVideos = document.getElementById('fLinkVideos'),
+  fLinkAgenda = document.getElementById('fLinkAgenda'),
+  fLinkContacto = document.getElementById('fLinkContacto'),
 
-  let fLinkEspa = document.getElementById('fLinkEspa')
-  let fLinkIng = document.getElementById('fLinkIng')
+  fLinkEspa = document.getElementById('fLinkEspa'),
+  fLinkIng = document.getElementById('fLinkIng')
 
   switch (lan) {
 
@@ -156,15 +172,12 @@ function backToTop() {
   window.scrollTo(0, 0);
 }
 
-document.querySelector('#titleGaleria').style.visibility = 'hidden'
-
 function showAndHiddenElements() {
   
-  let iconBackToTop = document.getElementById('iconBackToTop')
-  let navMenu = document.getElementById('navMenu')
-  let ulNavMenu = document.getElementById('ulNavMenu')
-  
-  let titleGaleria =  document.querySelector('#titleGaleria')
+  let iconBackToTop = document.getElementById('iconBackToTop'),
+  navMenu = document.getElementById('navMenu'),
+  ulNavMenu = document.getElementById('ulNavMenu'),
+  titleGaleria =  document.querySelector('#titleGaleria')
   
   if (pageYOffset > (titleGaleria.offsetTop - titleGaleria.offsetHeight) - 500 && !Array.from(titleGaleria.classList).includes('animated')) {
     document.querySelector('#titleGaleria').style.visibility = 'visible'
@@ -191,14 +204,10 @@ function showAndHiddenElements() {
 
 }
 
-window.addEventListener('scroll', () => {
-  showAndHiddenElements()
-})
-
 function onImagesLoaded(container, event) {
 
-  let images = container.getElementsByTagName("img")
-  let loaded = images.length
+  let images = container.getElementsByTagName("img"),
+  loaded = images.length
 
   for (let i = 0; i < images.length; i++) {
     if (images[i].complete) {
@@ -225,10 +234,10 @@ function hiddenPantallaBloqueo() {
 
 function showBtnToGetin() {
 
-  let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo')
-  let h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo')
-  let imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo')
-  let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
+  let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo'),
+  h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo'),
+  imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo'),
+  btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
 
   h1PantallaBloqueo.style.display = 'none'
   h2PantallaBloqueo.style.display = 'none'
@@ -243,6 +252,7 @@ function clickBtnToGetin() {
   menuHome()
   hiddenPantallaBloqueo()
   playAndPauseAudio()
+
 }
 
 function onLoad() {
@@ -259,8 +269,8 @@ function onClickLink() {
 
 function playAndPauseAudio() {
 
-  let controlAudio = document.getElementById('controlAudio')
-  let audioBg = document.getElementById('audioBg')
+  let controlAudio = document.getElementById('controlAudio'),
+  audioBg = document.getElementById('audioBg')
 
   if(controlAudio.getAttribute('custom-status') === 'pause') {
     controlAudio.setAttribute('src', './assets/icons/icons8-pausa-50.png')
@@ -274,74 +284,20 @@ function playAndPauseAudio() {
 
 }
 
-// alert(window.innerWidth)
+function addEventAnimatedStartEnd(element, animationValue, eventToAdd, eventToRemove) {
 
-const linkInicio =  document.querySelector('#linkInicio')
-linkInicio.addEventListener('mouseover', () => {
-  linkInicio.classList.add('animated', 'pulse')
-})
-linkInicio.addEventListener('mouseout', () => {
-  linkInicio.classList.remove('animated', 'pulse')
-})
+  element.addEventListener(eventToAdd, () => {
+    element.classList.add('animated', animationValue)
+  })
+  element.addEventListener(eventToRemove, () => {
+    element.classList.remove('animated', animationValue)
+  })
 
-const linkBiografia =  document.querySelector('#linkBiografia')
-linkBiografia.addEventListener('mouseover', () => {
-  linkBiografia.classList.add('animated', 'pulse')
-})
-linkBiografia.addEventListener('mouseout', () => {
-  linkBiografia.classList.remove('animated', 'pulse')
-})
-
-const linkGaleria =  document.querySelector('#linkGaleria')
-linkGaleria.addEventListener('mouseover', () => {
-  linkGaleria.classList.add('animated', 'pulse')
-})
-linkGaleria.addEventListener('mouseout', () => {
-  linkGaleria.classList.remove('animated', 'pulse')
-})
-
-const linkVideos =  document.querySelector('#linkVideos')
-linkVideos.addEventListener('mouseover', () => {
-  linkVideos.classList.add('animated', 'pulse')
-})
-linkVideos.addEventListener('mouseout', () => {
-  linkVideos.classList.remove('animated', 'pulse')
-})
-
-const linkAgenda =  document.querySelector('#linkAgenda')
-linkAgenda.addEventListener('mouseover', () => {
-  linkAgenda.classList.add('animated', 'pulse')
-})
-linkAgenda.addEventListener('mouseout', () => {
-  linkAgenda.classList.remove('animated', 'pulse')
-})
-
-const linkContacto =  document.querySelector('#linkContacto')
-linkContacto.addEventListener('mouseover', () => {
-  linkContacto.classList.add('animated', 'pulse')
-})
-linkContacto.addEventListener('mouseout', () => {
-  linkContacto.classList.remove('animated', 'pulse')
-})
+}
 
 function menuHome() {
 
-  let linkInicio =  document.querySelector('#linkInicio'),
-  linkBiografia =  document.querySelector('#linkBiografia'),
-  linkGaleria =  document.querySelector('#linkGaleria'),
-  linkVideos =  document.querySelector('#linkVideos'),
-  linkAgenda =  document.querySelector('#linkAgenda'),
-  linkContacto =  document.querySelector('#linkContacto'),
-  liInicio =  document.querySelector('#liInicio'),
-  liBiografia =  document.querySelector('#liBiografia'),
-  liGaleria =  document.querySelector('#liGaleria'),
-  liVideos =  document.querySelector('#liVideos'),
-  liAgenda =  document.querySelector('#liAgenda'),
-  liContacto =  document.querySelector('#liContacto'),
-  navMenu = document.querySelector('#navMenu')
-
-  const aMenus = [linkInicio, linkBiografia, linkGaleria, linkVideos, linkAgenda, linkContacto]
-  const liMenus = [liInicio, liBiografia, liGaleria, liVideos, liAgenda, liContacto]
+  let navMenu = document.querySelector('#navMenu')
 
   addStyleToElements(aMenus, 'width', '10rem')
   addStyleToElements(aMenus, 'borderRadius', '3px')
@@ -355,22 +311,7 @@ function menuHome() {
 
 function menuBody() {
 
-  let linkInicio =  document.querySelector('#linkInicio'),
-  linkBiografia =  document.querySelector('#linkBiografia'),
-  linkGaleria =  document.querySelector('#linkGaleria'),
-  linkVideos =  document.querySelector('#linkVideos'),
-  linkAgenda =  document.querySelector('#linkAgenda'),
-  linkContacto =  document.querySelector('#linkContacto'),
-  liInicio =  document.querySelector('#liInicio'),
-  liBiografia =  document.querySelector('#liBiografia'),
-  liGaleria =  document.querySelector('#liGaleria'),
-  liVideos =  document.querySelector('#liVideos'),
-  liAgenda =  document.querySelector('#liAgenda'),
-  liContacto =  document.querySelector('#liContacto'),
-  navMenu = document.querySelector('#navMenu')
-
-  const aMenus = [linkInicio, linkBiografia, linkGaleria, linkVideos, linkAgenda, linkContacto]
-  const liMenus = [liInicio, liBiografia, liGaleria, liVideos, liAgenda, liContacto]
+  let navMenu = document.querySelector('#navMenu')
 
   addStyleToElements(aMenus, 'width', 'initial')
   addStyleToElements(aMenus, 'borderRadius', 'none')
