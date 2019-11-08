@@ -20,6 +20,9 @@
     <img src="./assets/icons/espain.png" class="icon-spain" onclick="changeLanguage('es')" alt="">
     <img src="./assets/icons/reino-unido.png" class="icon-uk" onclick="changeLanguage('en')" alt="">
 
+    <div class="theme tBlack" onclick="changeTheme(0, 1)"></div>
+    <div class="theme tDefault" onclick="changeTheme(1, 0)"></div>
+
     <div class="bgHome" id="inicio">
         <span class="iconMenu" onclick="toogleNav()"><img src="./assets/icons/icons8-guitar.svg" alt=""></span>
         <nav id="navMenu">
@@ -33,7 +36,7 @@
             </ul>
         </nav>
         <div class="titleBgHome">
-            <h1 class="klanimate" data-animation="back" data-delay="0.5">Jonathan Esteve Aranda</h1>
+            <h1 id="jEsteveTitle" class="klanimate" data-animation="back" data-delay="0.5">Jonathan Esteve Aranda</h1>
         </div>
     </div>
 
@@ -45,25 +48,25 @@
     <div class="container">
         <div class="inicioImg row-1"><img src="./assets/images/foto3.jpg" class="klanimate" data-x="-100" alt="Imagen Jonathan Esteve Aranda"></div>
         <div id="biografia" class="inicio row-1">
-            <h1 id="titleBiografia" class="text-center title klanimate" data-y="-100">Biografía</h1>
-            <p id="biop1" class="klanimate" data-x="100">Ganador del Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018 (Primer Premio) 
+            <h1 id="titleBiografia" class="text-center title klanimate colorTheme" data-y="-100">Biografía</h1>
+            <p id="biop1" class="klanimate colorTheme" data-x="100">Ganador del Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018 (Primer Premio) 
                 y tras haber obtenido más de 10 premios nacionales e internacionales en prestigiosos concursos 
                 como el Francisco Tárrega de Benicássim, Concurso de música de Benidorm entre otros…Jonathan Esteve Aranda 
                 se sitúa actualmente como uno de los más destacados guitarristas clásicos de su generación.</p>
-            <p id="biop2" class="klanimate" data-x="-100">Su talento, versatilidad y dominio de los diferentes periodos del repertorio para guitarra clásica, 
+            <p id="biop2" class="klanimate colorTheme" data-x="-100">Su talento, versatilidad y dominio de los diferentes periodos del repertorio para guitarra clásica, 
                 lo convierten en un músico que toca con una personalidad muy destacada y definida, ligada siempre a 
                 una amplia técnica que ofrece grandes posibilidades sonoras. Su guitarra ha sonado en países Europeos 
                 como España, Francia, Reino Unido…Entre otras, se presenta en importantes salas como: Palacio de ferias y 
                 congresos de Málaga, Teatro Arniches, Auditorio Andrés Gaos, Teatro Concha Segura en España, St Olave Hart Street 
                 (Londres-Inglaterra) Auditorio Maurice Ravel (Francia)…</p>
-            <p id="biop3" class="klanimate" data-x="100">En 2015, destaca su interpretación y grabación en directo del famoso “Concierto de Aranjuez” junto con la orquesta 
+            <p id="biop3" class="klanimate colorTheme" data-x="100">En 2015, destaca su interpretación y grabación en directo del famoso “Concierto de Aranjuez” junto con la orquesta 
                 sinfónica Castelar. Ha trabajado y compartido escenario con directores de renombre mundial como José Luis Granados, 
                 Rafael Vilaplana o Salvador Brotons.</p>
-            <p id="biop4" class="klanimate" data-x="-100">Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: Guitar Fair de Málaga 
+            <p id="biop4" class="klanimate colorTheme" data-x="-100">Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: Guitar Fair de Málaga 
                 (2014), XXVIII Curso Internacional de Música de Benidorm, Festival internacional andaluz de Saint-Jean de Luz (Francia). 
                 Su iniciativa para organizar eventos relacionados con el mundo de la guitarra, le llevan a crear el Certamen de guitarra 
                 clásica “Ciudad de Castalla” del cual es promotor y director.</p>
-            <p id="biop5" class="klanimate" data-x="100">Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, Victor Bravo y Antonio 
+            <p id="biop5" class="klanimate colorTheme" data-x="100">Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, Victor Bravo y Antonio 
                 Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                 de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.</p>
         </div>
@@ -120,23 +123,23 @@
             </div> -->
         </div>
         <div id="agenda" class="agenda row-4">
-            <h1 id="titleAgenda" class="text-center title klanimate" data-y="-100">Agenda</h1>
+            <h1 id="titleAgenda" class="text-center title klanimate colorTheme" data-y="-100">Agenda</h1>
             <!-- <p id="p1agenda" class="text-center">No te pierdas ni un solo concierto de Jonathan Esteve.</p> -->
             <!-- <p id="p2agenda" class="text-center">Siguelo y entérate de todos sus conciertos y acontecimientos.</p> -->
             <img id="imgDisco" src="./assets/icons/icons8-cd-100.png" alt="">
-            <p id="p3agenda" class="text-center">En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.</p>
+            <p id="p3agenda" class="text-center colorTheme">En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.</p>
             <img id="imgFace" src="./assets/icons/icons8-facebook-nuevo-100.png" class="klanimate" data-x="100" alt="">
-            <a href="https://www.facebook.com/Jonathan-Esteve-Aranda-Classical-Guitarist-1410717555869368/" target="_blank">Jonathan Estheve Aranda</a>
+            <a href="https://www.facebook.com/Jonathan-Esteve-Aranda-Classical-Guitarist-1410717555869368/" class="colorTheme" target="_blank">Jonathan Estheve Aranda</a>
         </div>
         <div class="agendaImg row-4 klanimate" data-x="100"><img src="./assets/images/foto2.jpg" alt=""></div>
         <div class="contactoImg row-5"><img src="./assets/images/foto4.jpg" alt=""></div>
         <div id="contacto" class="contacto row-5">
-            <h1 id="titleContacto" class="text-center title klanimate" data-y="-100">Contacto y Redes</h1>
+            <h1 id="titleContacto" class="text-center title klanimate colorTheme" data-y="-100">Contacto y Redes</h1>
             <div class="contacto-grid">
-                <img src="./assets/icons/icons8-gmail-100.png" class="icon-gmail klanimate" data-x="-100" data-delay="0" alt=""><a href="mailto:asfdasfperon@asdfnvodld.com" class="klanimate" data-x="100" data-delay="0">jesteve.info@gmail.com</a>
-                <img src="./assets/icons/icons8-facebook-160.png" class="klanimate" data-x="-100" data-delay="0.5" alt=""><a href="https://www.facebook.com/jonathan.estevearanda" class="klanimate" data-x="100" data-delay="0.5" target="_blank">Jonathan Estheve Aranda</a>
-                <img src="./assets/icons/icons8-youtube-96.png" class="klanimate" data-x="-100" data-delay="1" alt=""><a href="https://www.youtube.com/channel/UCF3VzTUjZsOYLJ_ExOnZdaw" class="klanimate" data-x="100" data-delay="1" target="_blank">Jonathan Estheve Aranda</a>
-                <img src="./assets/icons/logo-clasicaguitarra.png" class="icon-clasicaguitarra klanimate" data-x="-100" data-delay="1.5" alt=""><a href="https://clasicaguitarra.com/#/perfil/5ce5995f41dd1600179f40e1" class="klanimate" data-x="100" data-delay="1.5" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/icons8-gmail-100.png" class="icon-gmail klanimate" data-x="-100" data-delay="0" alt=""><a href="mailto:asfdasfperon@asdfnvodld.com" class="klanimate colorTheme" data-x="100" data-delay="0">jesteve.info@gmail.com</a>
+                <img src="./assets/icons/icons8-facebook-160.png" class="klanimate" data-x="-100" data-delay="0.5" alt=""><a href="https://www.facebook.com/jonathan.estevearanda" class="klanimate colorTheme" data-x="100" data-delay="0.5" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/icons8-youtube-96.png" class="klanimate" data-x="-100" data-delay="1" alt=""><a href="https://www.youtube.com/channel/UCF3VzTUjZsOYLJ_ExOnZdaw" class="klanimate colorTheme" data-x="100" data-delay="1" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/logo-clasicaguitarra.png" class="icon-clasicaguitarra klanimate" data-x="-100" data-delay="1.5" alt=""><a href="https://clasicaguitarra.com/#/perfil/5ce5995f41dd1600179f40e1" class="klanimate colorTheme" data-x="100" data-delay="1.5" target="_blank">Jonathan Estheve Aranda</a>
             </div>
         </div>
     </div>

@@ -12,10 +12,11 @@ window.addEventListener('scroll', () => {
 
 document.querySelector('#titleGaleria').style.visibility = 'hidden'
 
-const aMenus = Array.from(document.getElementsByClassName('linkMenu'))
-const liMenus = Array.from(document.getElementsByClassName('liNav'))
+const elementsAMenu = Array.from(document.getElementsByClassName('linkMenu'))
+const elementsLiMenu = Array.from(document.getElementsByClassName('liNav'))
+const elementsColorTheme = Array.from(document.getElementsByClassName('colorTheme'))
 
-aMenus.forEach(element => {
+elementsAMenu.forEach(element => {
   addEventAnimatedStartEnd(element, 'pulse', 'mouseover', 'mouseout')
 })
 
@@ -299,27 +300,39 @@ function menuHome() {
 
   let navMenu = document.querySelector('#navMenu')
 
-  addStyleToElements(aMenus, 'width', '10rem')
-  addStyleToElements(aMenus, 'borderRadius', '3px')
-  addStyleToElements(aMenus, 'padding', '0.5rem 0.5rem 0 0.5rem')
-  addStyleToElements(aMenus, 'textAlign', 'left')
-  addStyleToElements(liMenus, 'display', 'block')
-  addStyleToElements(liMenus, 'marginTop', '5rem')
-  navMenu.style.textAlign = 'left'
+  addStyleToElements(elementsLiMenu, 'marginTop', '5rem')
+
+  if (innerWidth >= 960) {
+    addStyleToElements(elementsAMenu, 'width', '10rem')
+    addStyleToElements(elementsAMenu, 'borderRadius', '3px')
+    addStyleToElements(elementsAMenu, 'padding', '0.5rem 0.5rem 0 0.5rem')
+    addStyleToElements(elementsAMenu, 'textAlign', 'left')
+    addStyleToElements(elementsLiMenu, 'display', 'block')
+    navMenu.style.textAlign = 'left'
+
+    addStyleToElements(elementsAMenu, 'border', '1px solid transparent')
+    addStyleToElements(elementsAMenu, 'backgroundColor', '#2D3440')
+  }
 
 }
 
 function menuBody() {
 
   let navMenu = document.querySelector('#navMenu')
+  
+  addStyleToElements(elementsLiMenu, 'marginTop', 'initial')
 
-  addStyleToElements(aMenus, 'width', 'initial')
-  addStyleToElements(aMenus, 'borderRadius', 'none')
-  addStyleToElements(aMenus, 'padding', 'initial')
-  addStyleToElements(aMenus, 'textAlign', 'initial')
-  addStyleToElements(liMenus, 'display', 'inline')
-  addStyleToElements(liMenus, 'marginTop', 'initial')
-  navMenu.style.textAlign = 'center'
+  if (innerWidth >= 960) {
+    addStyleToElements(elementsAMenu, 'width', 'initial')
+    addStyleToElements(elementsAMenu, 'borderRadius', 'none')
+    addStyleToElements(elementsAMenu, 'padding', 'initial')
+    addStyleToElements(elementsAMenu, 'textAlign', 'initial')
+    addStyleToElements(elementsLiMenu, 'display', 'inline')
+    navMenu.style.textAlign = 'center'
+
+    addStyleToElements(elementsAMenu, 'border', 'none')
+    addStyleToElements(elementsAMenu, 'backgroundColor', 'transparent')
+  }
 
 }
 
@@ -330,3 +343,24 @@ function addStyleToElements(elements, style, value) {
   }
 
 }
+
+function changeTheme(deflt, black) {
+
+  let body = document.getElementsByTagName('body')[0],
+  agenda = document.querySelector('#agenda'),
+  contacto = document.querySelector('#contacto'),
+  jEsteveTitle = document.querySelector('#jEsteveTitle')
+
+  if (black) {
+    addStyleToElements([body, agenda, contacto], 'backgroundColor', 'black')
+    addStyleToElements(elementsColorTheme, 'color', '#F5F5F5')
+    jEsteveTitle.style.color = 'black'
+  } else {
+    addStyleToElements([body, agenda, contacto], 'backgroundColor', 'white')
+    addStyleToElements(elementsColorTheme, 'color', '#37474F')
+    jEsteveTitle.style.color = 'white'
+
+  }
+
+}
+

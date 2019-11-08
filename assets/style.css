@@ -17,12 +17,12 @@ html {
     grid-gap: 0;
     grid-template-columns: 100%;
     /* max-width: 1920px; Ya veremos si lo dejo */
-    /* max-width: 1920px; */
+    max-width: 1920px;
     margin: auto;
 }
 
 .bgHome {
-    background-image: url("./images/bg-llamas-humo-5.jpg");
+    background-image: url("./images/bg-llamas-humo-5.png");
     /* max-width: 1500px; Ya veremos si lo dejo*/
     margin: auto;
     /* Set a specific height */
@@ -269,6 +269,29 @@ iframe {
     left: 1rem;
 }
 
+.theme {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0.3rem;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.tDefault {
+    background: rgb(187,187,187);
+    /* background: radial-gradient(circle, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 100%); */
+    right: 9rem;
+}
+
+.tBlack {
+    background: rgb(0,0,0);
+    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(187,187,187,1) 100%); */
+    right: 7rem;
+}
+
 #pantallaBloqueo {
     position: fixed;
     top: 0;
@@ -461,10 +484,11 @@ div.footerGrid img.iconLenguaje {
     .bgHome nav ul li a {
         display: inline-block;
         width: 10rem;
-        /* background-color: #2D3440; */
+        background-color: #2D3440;
         border-radius: 3px;
         padding: 0.5rem 0.5rem 0 0.5rem;
         text-align: left;
+        border: 1px solid transparent;
     }
 
     /* .bgHome nav ul li a:hover {
