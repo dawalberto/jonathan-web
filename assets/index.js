@@ -10,8 +10,6 @@ window.addEventListener('scroll', () => {
   showAndHiddenElements()
 })
 
-document.querySelector('#titleGaleria').style.visibility = 'hidden'
-
 const elementsAMenu = Array.from(document.getElementsByClassName('linkMenu'))
 const elementsLiMenu = Array.from(document.getElementsByClassName('liNav'))
 const elementsColorTheme = Array.from(document.getElementsByClassName('colorTheme'))
@@ -173,17 +171,52 @@ function backToTop() {
   window.scrollTo(0, 0);
 }
 
+function animateElement(element, animation) {
+
+  if (pageYOffset > (element.offsetTop - element.offsetHeight) - 700 && !Array.from(element.classList).includes('animated')) {
+    element.style.visibility = 'visible'
+    element.classList.add('animated', animation)
+  }
+
+}
+
 function showAndHiddenElements() {
   
   let iconBackToTop = document.getElementById('iconBackToTop'),
   navMenu = document.getElementById('navMenu'),
-  ulNavMenu = document.getElementById('ulNavMenu'),
-  titleGaleria =  document.querySelector('#titleGaleria')
+
+  titleBiografia =  document.querySelector('#titleBiografia'),
+  imgBiografia =  document.querySelector('#imgBiografia'),
+  biop1 =  document.querySelector('#biop1'),
+  biop2 =  document.querySelector('#biop2'),
+  biop3 =  document.querySelector('#biop3'),
+  biop4 =  document.querySelector('#biop4'),
+  biop5 =  document.querySelector('#biop5'),
+  titleVideos = document.querySelector('#titleVideos'),
+  titleFirstVideo = document.querySelector('#titleFirstVideo'),
+  titleSecondVideo = document.querySelector('#titleSecondVideo'),
+  titleThreeVideo = document.querySelector('#titleThreeVideo'),
+  containerFirstVideo = document.querySelector('#containerFirstVideo'),
+  containerSecondVideo = document.querySelector('#containerSecondVideo'),
+  containerThreeVideo = document.querySelector('#containerThreeVideo'),
+  titleAgenda = document.querySelector('#titleAgenda')
   
-  if (pageYOffset > (titleGaleria.offsetTop - titleGaleria.offsetHeight) - 500 && !Array.from(titleGaleria.classList).includes('animated')) {
-    document.querySelector('#titleGaleria').style.visibility = 'visible'
-    titleGaleria.classList.add('animated', 'bounceInLeft')
-  }
+  animateElement(titleBiografia, 'bounceInDown')
+  animateElement(titleGaleria, 'bounceInDown')
+  animateElement(titleVideos, 'bounceInDown')
+  animateElement(titleAgenda, 'bounceInDown')
+  animateElement(imgBiografia, 'bounceInLeft')
+  animateElement(biop1, 'bounceInRight')
+  animateElement(biop2, 'bounceInLeft')
+  animateElement(biop3, 'bounceInRight')
+  animateElement(biop4, 'bounceInLeft')
+  animateElement(biop5, 'bounceInRight')
+  // animateElement(titleFirstVideo, 'fadeIn')
+  // animateElement(titleSecondVideo, 'fadeIn')
+  // animateElement(titleThreeVideo, 'fadeIn')
+  // animateElement(containerFirstVideo, 'bounceInRight')
+  // animateElement(containerSecondVideo, 'bounceInLeft')
+  // animateElement(containerThreeVideo, 'bounceInRight')
 
   if (pageYOffset < 850) {
     iconBackToTop.style.visibility = 'hidden'

@@ -451,6 +451,25 @@ div.footerGrid img.iconLenguaje {
     border: 2px solid #263238;
 }
 
+#titleFirstVideo,
+#titleSecondVideo,
+#titleThreeVideo,
+#containerFirstVideo,
+#containerSecondVideo,
+#containerThreeVideo,
+#titleBiografia, 
+#imgBiografia, 
+#biop1, 
+#biop2, 
+#biop3, 
+#biop4, 
+#biop5, 
+#titleGaleria,
+#titleVideos,
+#titleAgenda {
+    visibility: hidden;
+}
+
 @media (min-width: 960px) {
 
     .container {
