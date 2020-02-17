@@ -10,7 +10,7 @@
 </head>
 <body onload="onLoad()">
     <div id="pantallaBloqueo">
-        <h1 id="btnPantallaBloqueo" class="btn" onclick="clickBtnaToToGetIn()">ENTRAR</button>
+        <h1 id="btnPantallaBloqueo" class="btn" onclick="clickBtnaToToGetIn()">ENTRAR</h1>
         <h1 id="h1PantallaBloqueo">Jonathan Esteve Aranda</h1>
         <img id="imgPantallaBloqueo" src="./assets/icons/icons8-guitar.svg" alt="">
         <h2 id="h2PantallaBloqueo">- Guitarrista Clásico - <br> - Classical Guitarist -</h2>
@@ -39,7 +39,7 @@
     <audio id="audioBg" loop controls>
         <source src="./assets/music/allegro.mp3" type="audio/mpeg">
     </audio>
-    <img id="controlAudio" onclick="playAndPauseAudio()" src="./assets/icons/icons8-play-50.png" custom-status="pause">
+    <img id="controlAudio" class="btn" onclick="playAndPauseAudio()" src="./assets/icons/icons8-play-50.png" custom-status="pause">
 
     <div class="container">
         <div class="inicioImg row-1"><img src="./assets/images/foto3.jpg" class="klanimate" data-x="-100" alt="Imagen Jonathan Esteve Aranda"></div>
@@ -146,17 +146,17 @@
     <div class="footer">
         <div class="footerGrid">
             <img class="item-grid-align-center col-1 row-1" src="./assets/icons/footer/icons8-casa-50.png" alt="">
-            <a id="fLinkInicio" class="item-grid-align-center col-1 row-2" href="#inicio">Inicio</a>
-            <a id="fLinkBiografia" class="item-grid-align-center col-1 row-3" href="#biografia">Biografía</a>
+            <a id="fLinkInicio" class="btn item-grid-align-center col-1 row-2" href="#inicio">Inicio</a>
+            <a id="fLinkBiografia" class="btn item-grid-align-center col-1 row-3" href="#biografia">Biografía</a>
             <img class="item-grid-align-center col-2 row-1" src="./assets/icons/footer/icons8-imagen-50.png" alt="">
-            <a id="fLinkGaleria" class="item-grid-align-center col-2 row-2" href="#galeria">Galeria</a>
-            <a id="fLinkVideos" class="item-grid-align-center col-2 row-3" href="#first-video">Videos</a>
+            <a id="fLinkGaleria" class="btn item-grid-align-center col-2 row-2" href="#galeria">Galeria</a>
+            <a id="fLinkVideos" class="btn item-grid-align-center col-2 row-3" href="#first-video">Videos</a>
             <img class="item-grid-align-center col-3 row-1" src="./assets/icons/footer/icons8-nuevo-contacto-50.png" alt="">
-            <a id="fLinkAgenda" class="item-grid-align-center col-3 row-2" href="#agenda">Agenda</a>
-            <a id="fLinkContacto" class="item-grid-align-center col-3 row-3" href="#contacto">Contacto</a>
+            <a id="fLinkAgenda" class="btn item-grid-align-center col-3 row-2" href="#agenda">Agenda</a>
+            <a id="fLinkContacto" class="btn item-grid-align-center col-3 row-3" href="#contacto">Contacto</a>
             <img class="item-grid-align-center col-4 row-1" src="./assets/icons/footer/icons8-idioma-50.png" alt="">
-            <p onclick="changeLanguage('es')" class="item-grid-align-center col-4 row-2" href="#"><img class="iconLenguaje" src="./assets/icons/espain.png" alt=""><span id="fLinkEspa">Español</span></p>
-            <p onclick="changeLanguage('en')" class="item-grid-align-center col-4 row-3" href="#"><img class="iconLenguaje" src="./assets/icons/reino-unido.png" alt=""><span id="fLinkIng">Ingles</span></p>
+            <p onclick="changeLanguage('es')" class="btn item-grid-align-center col-4 row-2" href="#"><img class="iconLenguaje" src="./assets/icons/espain.png" alt=""><span id="fLinkEspa">Español</span></p>
+            <p onclick="changeLanguage('en')" class="btn item-grid-align-center col-4 row-3" href="#"><img class="iconLenguaje" src="./assets/icons/reino-unido.png" alt=""><span id="fLinkIng">Ingles</span></p>
             <p class="pBorder col-1-4 row-4"></p>
             <p class="item-grid-align-center pCopyright col-2-3 row-5">© 2019</p>
         </div>

@@ -207,7 +207,10 @@ function onImagesLoaded(container, event) {
 }
 
 function hiddenPantallaBloqueo() {
-  document.getElementById('pantallaBloqueo').style.display = 'none'
+  document.getElementById('pantallaBloqueo').style.opacity = '0'
+  setTimeout(() => {
+    document.getElementById('pantallaBloqueo').style.display = 'none'
+  }, 700)
 }
 
 function showBtnaToToGetIn() {
