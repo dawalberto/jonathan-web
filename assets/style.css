@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300i&display=swap');
 
 body {
     margin: 0;
-    /* background: black; */
     color: #263238;
     overflow-x: hidden;
 }
@@ -24,7 +24,6 @@ html {
     background-image: url("./images/bg-llamas-humo-5.png");
     /* max-width: 1500px; Ya veremos si lo dejo*/
     margin: auto;
-    /* Set a specific height */
     min-height: 100vh; 
     max-width: 100vw; 
 
@@ -42,7 +41,7 @@ html {
 }
 
 .bgHome nav ul {
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     list-style: none;
     position: fixed;
@@ -53,7 +52,6 @@ html {
     width: 100%;
     height: 100vh;
     padding-top: 3rem;
-    /* TODO menu borroso en chrome */
 }
 
 .bgHome nav ul li {
@@ -99,8 +97,7 @@ html {
 .inicio {
     padding: 2rem;
     font-size: 1.8em;
-    font-family: 'Satisfy', cursive;
-    /* background-color: white; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .videos {
@@ -143,7 +140,7 @@ iframe {
 
 .videos h1 {
     color: white;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .videos h1:first-of-type {
@@ -156,7 +153,7 @@ iframe {
 
 .title {
     font-size: 4rem;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .icon {
@@ -202,8 +199,7 @@ iframe {
 
 .contacto div.contacto-grid a {
     justify-self: center;
-    /* font-family: 'Calligraffitti', cursive; */
-    font-family: 'Satisfy', cursive;
+    font-family: 'Ubuntu', sans-serif;
     color: gray;
     font-size: 2rem;
     text-decoration: none;
@@ -219,17 +215,9 @@ iframe {
 .footer {
     background: rgb(38,50,56);
     background: linear-gradient(0deg, rgba(38,50,56,1) 0%, rgba(0,0,0,1) 60%);
-    /* background-image: url("./images/bg-llamas-humo-5.jpg"); */
     /* max-width: 1500px; Ya veremos si lo dejo*/
     margin: auto;
-    /* Set a specific height */
     min-height: 50vh; 
-  
-    /* Create the parallax scrolling effect */
-    /* background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .icon-up {
@@ -261,11 +249,21 @@ iframe {
 .icon-spain {
     right: initial;
     left: 4rem;
+    filter: brightness(0.9);
 }
 
 .icon-uk {
     right: initial;
     left: 1rem;
+    filter: brightness(0.9);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
 }
 
 #pantallaBloqueo {
@@ -276,7 +274,6 @@ iframe {
     background: #222222;
     z-index: 1000;
 
-    /**/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,7 +281,6 @@ iframe {
     text-align: center;
     align-items: center;
 
-    /*  */
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(124,124,124,1) 35%, rgba(255,255,255,1) 100%); 
 }
@@ -304,13 +300,13 @@ iframe {
 #pantallaBloqueo h1 {
     margin-bottom: 5rem;
     color: white;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #pantallaBloqueo h2 {
     margin-top: 5rem;
     color: white;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -332,12 +328,12 @@ iframe {
 
 .agenda p, .agenda a {
     font-size: 1.8em;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
     margin: 2rem 3rem;
 }
 
 .agenda a {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -358,7 +354,7 @@ div.titleBgHome {
     color: white;
     font-size: 4rem;
     text-align: center;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 100;
 }
 
@@ -367,11 +363,11 @@ div.footerGrid {
     grid-template-columns: 100%;
     gap: 2rem;
     padding: 10rem 2rem 2rem 2rem;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 div.footerGrid a, div.footerGrid p {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
@@ -395,7 +391,7 @@ div.footerGrid img.iconLenguaje {
 
 .pCopyright {
     color: white;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #audioBg {
