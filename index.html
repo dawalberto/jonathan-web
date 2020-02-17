@@ -7,10 +7,11 @@
     <title>Jonathan-project</title>
     <link rel="icon" type="image/png" href="./assets/icons/icons8-guitarra-128.png" />
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body onload="onLoad()">
     <div id="pantallaBloqueo">
-        <h1 id="btnPantallaBloqueo" onclick="clickBtnaToToGetIn()">ENTRAR</button>
+        <h1 id="btnPantallaBloqueo" onclick="clickBtnToGetin()">ENTRAR</button>
         <h1 id="h1PantallaBloqueo">Jonathan Esteve Aranda</h1>
         <img id="imgPantallaBloqueo" src="./assets/icons/icons8-guitar.svg" alt="">
         <h2 id="h2PantallaBloqueo">- Guitarrista Clásico - <br> - Classical Guitarist -</h2>
@@ -19,20 +20,23 @@
     <img src="./assets/icons/espain.png" class="icon-spain" onclick="changeLanguage('es')" alt="">
     <img src="./assets/icons/reino-unido.png" class="icon-uk" onclick="changeLanguage('en')" alt="">
 
+    <div class="theme tBlack" onclick="changeTheme(0, 1)"></div>
+    <div class="theme tDefault" onclick="changeTheme(1, 0)"></div>
+
     <div class="bgHome" id="inicio">
         <span class="iconMenu" onclick="toogleNav()"><img src="./assets/icons/icons8-guitar.svg" alt=""></span>
         <nav id="navMenu">
             <ul id="ulNavMenu">
-                <li><a onclick="onClickLink()" id="linkInicio"class="linkMenu" href="#inicio">Inicio</a></li>
-                <li><a onclick="onClickLink()" id="linkBiografia"class="linkMenu" href="#biografia">Biografía</a></li>
-                <li><a onclick="onClickLink()" id="linkGaleria" class="linkMenu" href="#galeria">Galeria</a></li>
-                <li><a onclick="onClickLink()" id="linkVideos" class="linkMenu" href="#first-video">Videos</a></li>
-                <li><a onclick="onClickLink()" id="linkAgenda" class="linkMenu" href="#agenda">Agenda</a></li>
-                <li><a onclick="onClickLink()" id="linkContacto" class="linkMenu" href="#contacto">Contacto</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkInicio"class="linkMenu" href="#inicio">Inicio</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkBiografia"class="linkMenu" href="#biografia">Biografía</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkGaleria" class="linkMenu" href="#galeria">Galeria</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkVideos" class="linkMenu" href="#first-video">Videos</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkAgenda" class="linkMenu" href="#agenda">Agenda</a></li>
+                <li class="liNav"><a onclick="onClickLink()" id="linkContacto" class="linkMenu" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div class="titleBgHome">
-            <h1 class="klanimate" data-animation="back" data-delay="0.5">Jonathan Esteve Aranda</h1>
+            <h1 id="jEsteveTitle" >Jonathan Esteve Aranda</h1>
         </div>
     </div>
 
@@ -42,53 +46,50 @@
     <img id="controlAudio" onclick="playAndPauseAudio()" src="./assets/icons/icons8-play-50.png" custom-status="pause">
 
     <div class="container">
-        <div class="inicioImg row-1"><img src="./assets/images/foto3.jpg" class="klanimate" data-x="-100" alt="Imagen Jonathan Esteve Aranda"></div>
+        <div class="inicioImg row-1"><img src="./assets/images/foto3.jpg" id="imgBiografia" alt="Imagen Jonathan Esteve Aranda"></div>
         <div id="biografia" class="inicio row-1">
-            <h1 id="titleBiografia" class="text-center title klanimate" data-y="-100">Biografía</h1>
-            <p id="biop1" class="klanimate" data-x="100">Ganador del Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018 (Primer Premio) 
+            <h1 id="titleBiografia" class="text-center title colorTheme">Biografía</h1>
+            <p id="biop1" class="colorTheme">Ganador del Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018 (Primer Premio) 
                 y tras haber obtenido más de 10 premios nacionales e internacionales en prestigiosos concursos 
                 como el Francisco Tárrega de Benicássim, Concurso de música de Benidorm entre otros…Jonathan Esteve Aranda 
                 se sitúa actualmente como uno de los más destacados guitarristas clásicos de su generación.</p>
-            <p id="biop2" class="klanimate" data-x="-100">Su talento, versatilidad y dominio de los diferentes periodos del repertorio para guitarra clásica, 
+            <p id="biop2" class="colorTheme">Su talento, versatilidad y dominio de los diferentes periodos del repertorio para guitarra clásica, 
                 lo convierten en un músico que toca con una personalidad muy destacada y definida, ligada siempre a 
                 una amplia técnica que ofrece grandes posibilidades sonoras. Su guitarra ha sonado en países Europeos 
                 como España, Francia, Reino Unido…Entre otras, se presenta en importantes salas como: Palacio de ferias y 
                 congresos de Málaga, Teatro Arniches, Auditorio Andrés Gaos, Teatro Concha Segura en España, St Olave Hart Street 
                 (Londres-Inglaterra) Auditorio Maurice Ravel (Francia)…</p>
-            <p id="biop3" class="klanimate" data-x="100">En 2015, destaca su interpretación y grabación en directo del famoso “Concierto de Aranjuez” junto con la orquesta 
+            <p id="biop3" class="colorTheme">En 2015, destaca su interpretación y grabación en directo del famoso “Concierto de Aranjuez” junto con la orquesta 
                 sinfónica Castelar. Ha trabajado y compartido escenario con directores de renombre mundial como José Luis Granados, 
                 Rafael Vilaplana o Salvador Brotons.</p>
-            <p id="biop4" class="klanimate" data-x="-100">Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: Guitar Fair de Málaga 
+            <p id="biop4" class="colorTheme">Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: Guitar Fair de Málaga 
                 (2014), XXVIII Curso Internacional de Música de Benidorm, Festival internacional andaluz de Saint-Jean de Luz (Francia). 
                 Su iniciativa para organizar eventos relacionados con el mundo de la guitarra, le llevan a crear el Certamen de guitarra 
                 clásica “Ciudad de Castalla” del cual es promotor y director.</p>
-            <p id="biop5" class="klanimate" data-x="100">Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, Victor Bravo y Antonio 
+            <p id="biop5" class="colorTheme">Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, Victor Bravo y Antonio 
                 Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                 de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.</p>
         </div>
         <div id="galeria" class="galeria col-1-2 row-2">
-            <h1 id="titleGaleria" class="text-center title klanimate" data-y="100">Galeria</h1>
+            <h1 id="titleGaleria" class="text-center title">Galeria</h1>
             <div class="galleria">
-                <img src="./assets/images/galeria/1-min.jpg" alt="">
-                <img src="./assets/images/galeria/2-min.jpg" alt="">
                 <img src="./assets/images/galeria/3-min.jpg" alt="">
                 <img src="./assets/images/galeria/4-min.jpg" alt="">
                 <img src="./assets/images/galeria/5-min.jpg" alt="">
-                <img src="./assets/images/galeria/6-min.jpg" alt="">
-                <img src="./assets/images/galeria/7-min.jpg" alt="">
-                <img src="./assets/images/galeria/8-min.jpg" alt="">
-                <img src="./assets/images/galeria/9-min.jpg" alt="">
-                <img src="./assets/images/galeria/10-min.jpg" alt="">
                 <img src="./assets/images/galeria/11-min.jpg" alt="">
                 <img src="./assets/images/galeria/12-min.jpg" alt="">
                 <img src="./assets/images/galeria/13-min.jpg" alt="">
-                <img src="./assets/images/galeria/14-min.jpg" alt="">
+                <img src="./assets/images/galeria/15.jpg" alt="">
+                <img src="./assets/images/galeria/16.jpg" alt="">
+                <img src="./assets/images/galeria/17.jpg" alt="">
+                <img src="./assets/images/galeria/18.jpg" alt="">
+                <img src="./assets/images/galeria/19.jpg" alt="">
             </div>
         </div>
         <div id="videos" class="videos col-1-2 row-3">
-            <h1 id="titleVideos" class="text-center title klanimate" data-y="-100">Vídeos</h1>
-            <h1 id="first-video" class="text-center first-title-video klanimate" data-x="100">Rosita Polka by Francisco Tárrega</h1>
-            <div class="container-video klanimate" data-x="-100">
+            <h1 id="titleVideos" class="text-center title">Vídeos</h1>
+            <!-- <h1 id="titleFirstVideo" class="text-center first-title-video">Rosita Polka by Francisco Tárrega</h1>
+            <div id="containerFirstVideo" class="container-video">
                 <iframe 
                 width="560" 
                 height="315"
@@ -98,8 +99,8 @@
                 allowfullscreen>
                 </iframe>
             </div>
-            <h1 class="text-center klanimate" data-x="100">Allegro BWV 1003 by J.S.Bach Sonata nº2</h1>
-            <div class="container-video klanimate" data-x="-100">
+            <h1 id="titleSecondVideo" class="text-center">Allegro BWV 1003 by J.S.Bach Sonata nº2</h1>
+            <div id="containerSecondVideo" class="container-video">
                 <iframe 
                 width="560" 
                 height="315"
@@ -109,8 +110,8 @@
                 allowfullscreen>
                 </iframe>
             </div>
-            <h1 class="text-center klanimate" data-x="100">Danza Paraguaya Guaraní by Agustín Barrios Mangoré</h1>
-            <div class="container-video klanimate" data-x="-100">
+            <h1 id="titleThreeVideo" class="text-center">Danza Paraguaya Guaraní by Agustín Barrios Mangoré</h1>
+            <div id="containerThreeVideo" class="container-video">
                 <iframe 
                 width="560" 
                 height="315"
@@ -119,26 +120,24 @@
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
                 </iframe>
-            </div>
+            </div> -->
         </div>
         <div id="agenda" class="agenda row-4">
-            <h1 id="titleAgenda" class="text-center title klanimate" data-y="-100">Agenda</h1>
-            <p id="p1agenda" class="text-center">No te pierdas ni un solo consierto de Jonathan Esteve.</p>
-            <p id="p2agenda" class="text-center">Siguelo y entérate de todos sus conciertos y acontecimientos.</p>
+            <h1 id="titleAgenda" class="text-center title colorTheme">Agenda</h1>
             <img id="imgDisco" src="./assets/icons/icons8-cd-100.png" alt="">
-            <p id="p3agenda" class="text-center">En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.</p>
+            <p id="p3agenda" class="text-center colorTheme">En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.</p>
             <img id="imgFace" src="./assets/icons/icons8-facebook-nuevo-100.png" class="klanimate" data-x="100" alt="">
-            <a href="https://www.facebook.com/Jonathan-Esteve-Aranda-Classical-Guitarist-1410717555869368/" target="_blank">Jonathan Estheve Aranda</a>
+            <a href="https://www.facebook.com/Jonathan-Esteve-Aranda-Classical-Guitarist-1410717555869368/" class="colorTheme" target="_blank">Jonathan Estheve Aranda</a>
         </div>
         <div class="agendaImg row-4 klanimate" data-x="100"><img src="./assets/images/foto2.jpg" alt=""></div>
         <div class="contactoImg row-5"><img src="./assets/images/foto4.jpg" alt=""></div>
         <div id="contacto" class="contacto row-5">
-            <h1 id="titleContacto" class="text-center title klanimate" data-y="-100">Contacto y Redes</h1>
+            <h1 id="titleContacto" class="text-center title klanimate colorTheme" data-y="-100">Contacto y Redes</h1>
             <div class="contacto-grid">
-                <img src="./assets/icons/icons8-gmail-100.png" class="icon-gmail klanimate" data-x="-100" data-delay="0" alt=""><a href="mailto:asfdasfperon@asdfnvodld.com" class="klanimate" data-x="100" data-delay="0">jesteve.info@gmail.com</a>
-                <img src="./assets/icons/icons8-facebook-160.png" class="klanimate" data-x="-100" data-delay="0.5" alt=""><a href="https://www.facebook.com/jonathan.estevearanda" class="klanimate" data-x="100" data-delay="0.5" target="_blank">Jonathan Estheve Aranda</a>
-                <img src="./assets/icons/icons8-youtube-96.png" class="klanimate" data-x="-100" data-delay="1" alt=""><a href="https://www.youtube.com/channel/UCF3VzTUjZsOYLJ_ExOnZdaw" class="klanimate" data-x="100" data-delay="1" target="_blank">Jonathan Estheve Aranda</a>
-                <img src="./assets/icons/logo-clasicaguitarra.png" class="icon-clasicaguitarra klanimate" data-x="-100" data-delay="1.5" alt=""><a href="https://clasicaguitarra.com/#/perfil/5ce5995f41dd1600179f40e1" class="klanimate" data-x="100" data-delay="1.5" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/icons8-gmail-100.png" class="icon-gmail klanimate" data-x="-100" data-delay="0" alt=""><a href="mailto:asfdasfperon@asdfnvodld.com" class="klanimate colorTheme" data-x="100" data-delay="0">jesteve.info@gmail.com</a>
+                <img src="./assets/icons/icons8-facebook-160.png" class="klanimate" data-x="-100" data-delay="0.5" alt=""><a href="https://www.facebook.com/jonathan.estevearanda" class="klanimate colorTheme" data-x="100" data-delay="0.5" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/icons8-youtube-96.png" class="klanimate" data-x="-100" data-delay="1" alt=""><a href="https://www.youtube.com/channel/UCF3VzTUjZsOYLJ_ExOnZdaw" class="klanimate colorTheme" data-x="100" data-delay="1" target="_blank">Jonathan Estheve Aranda</a>
+                <img src="./assets/icons/logo-clasicaguitarra.png" class="icon-clasicaguitarra klanimate" data-x="-100" data-delay="1.5" alt=""><a href="https://clasicaguitarra.com/#/perfil/5ce5995f41dd1600179f40e1" class="klanimate colorTheme" data-x="100" data-delay="1.5" target="_blank">Jonathan Estheve Aranda</a>
             </div>
         </div>
     </div>
