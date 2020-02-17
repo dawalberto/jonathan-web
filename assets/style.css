@@ -1,5 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Calligraffitti|Satisfy&display=swap'); */
-@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Satisfy&display=swap');
 
 body {
     margin: 0;
@@ -27,7 +26,8 @@ html {
     margin: auto;
     /* Set a specific height */
     min-height: 100vh; 
-  
+    max-width: 100vw; 
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -42,7 +42,7 @@ html {
 }
 
 .bgHome nav ul {
-    font-family: 'PT Serif', serif;
+    font-family: 'Calligraffitti', cursive;
     margin: 0;
     list-style: none;
     position: fixed;
@@ -57,7 +57,7 @@ html {
 }
 
 .bgHome nav ul li {
-    /* display: block; */
+    display: block;
     margin-right: 3rem;
     font-size: 2rem;
     border-bottom: 1px solid white;
@@ -99,8 +99,7 @@ html {
 .inicio {
     padding: 2rem;
     font-size: 1.8em;
-    font-family: 'PT Serif', serif;
-    text-align: justify;
+    font-family: 'Satisfy', cursive;
     /* background-color: white; */
 }
 
@@ -144,7 +143,7 @@ iframe {
 
 .videos h1 {
     color: white;
-    font-family: 'PT Serif', serif;
+    font-family: 'Calligraffitti', cursive;
 }
 
 .videos h1:first-of-type {
@@ -157,7 +156,7 @@ iframe {
 
 .title {
     font-size: 4rem;
-    font-family: 'PT Serif', serif;
+    font-family: 'Calligraffitti', cursive;
 }
 
 .icon {
@@ -203,8 +202,8 @@ iframe {
 
 .contacto div.contacto-grid a {
     justify-self: center;
-    /* font-family: 'PT Serif', serif; */
-    font-family: 'PT Serif', serif;
+    /* font-family: 'Calligraffitti', cursive; */
+    font-family: 'Satisfy', cursive;
     color: gray;
     font-size: 2rem;
     text-decoration: none;
@@ -269,29 +268,6 @@ iframe {
     left: 1rem;
 }
 
-.theme {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute;
-    top: 0.3rem;
-    cursor: pointer;
-    z-index: 99;
-}
-
-.tDefault {
-    background: rgb(187,187,187);
-    /* background: radial-gradient(circle, rgba(187,187,187,1) 0%, rgba(255,255,255,1) 100%); */
-    right: 9rem;
-}
-
-.tBlack {
-    background: rgb(0,0,0);
-    /* background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(187,187,187,1) 100%); */
-    right: 7rem;
-}
-
 #pantallaBloqueo {
     position: fixed;
     top: 0;
@@ -328,13 +304,13 @@ iframe {
 #pantallaBloqueo h1 {
     margin-bottom: 5rem;
     color: white;
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
 }
 
 #pantallaBloqueo h2 {
     margin-top: 5rem;
     color: white;
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
@@ -356,12 +332,12 @@ iframe {
 
 .agenda p, .agenda a {
     font-size: 1.8em;
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
     margin: 2rem 3rem;
 }
 
 .agenda a {
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
     display: block;
     text-align: center;
     text-decoration: none;
@@ -382,7 +358,7 @@ div.titleBgHome {
     color: white;
     font-size: 4rem;
     text-align: center;
-    font-family: 'PT Serif', serif;
+    font-family: 'Calligraffitti', cursive;
     font-weight: 100;
 }
 
@@ -391,11 +367,11 @@ div.footerGrid {
     grid-template-columns: 100%;
     gap: 2rem;
     padding: 10rem 2rem 2rem 2rem;
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
 }
 
 div.footerGrid a, div.footerGrid p {
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
@@ -419,7 +395,7 @@ div.footerGrid img.iconLenguaje {
 
 .pCopyright {
     color: white;
-    font-family: 'PT Serif', serif;
+    font-family: 'Satisfy', cursive;
 }
 
 #audioBg {
@@ -451,25 +427,6 @@ div.footerGrid img.iconLenguaje {
     border: 2px solid #263238;
 }
 
-#titleFirstVideo,
-#titleSecondVideo,
-#titleThreeVideo,
-#containerFirstVideo,
-#containerSecondVideo,
-#containerThreeVideo,
-#titleBiografia, 
-#imgBiografia, 
-#biop1, 
-#biop2, 
-#biop3, 
-#biop4, 
-#biop5, 
-#titleGaleria,
-#titleVideos,
-#titleAgenda {
-    visibility: hidden;
-}
-
 @media (min-width: 960px) {
 
     .container {
@@ -477,7 +434,6 @@ div.footerGrid img.iconLenguaje {
     }
 
     .bgHome nav {
-        text-align: left;
         display: block;
         position: fixed;
         width: 100%;
@@ -494,25 +450,14 @@ div.footerGrid img.iconLenguaje {
     }
 
     .bgHome nav ul li {
-        display: block;
-        margin-top: 5rem;
+        display: inline;
         border: none;
         padding: initial;
     }
 
     .bgHome nav ul li a {
         display: inline-block;
-        width: 10rem;
-        background-color: #2D3440;
-        border-radius: 3px;
-        padding: 0.5rem 0.5rem 0 0.5rem;
-        text-align: left;
-        border: 1px solid transparent;
     }
-
-    /* .bgHome nav ul li a:hover {
-        width: 12rem;
-    } */
 
     a.linkMenu:after {
         content: '';

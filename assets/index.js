@@ -1,3 +1,8 @@
+function toogleNav() {
+  let navMenu = document.getElementById('navMenu')
+  navMenu.style.display === 'block' ? navMenu.style.display = 'none' : navMenu.style.display = 'block'
+}
+
 Galleria.loadTheme('librerias/galleria/themes/classic/galleria.classic.min.js')
 
 Galleria.run('.galleria', {
@@ -6,60 +11,40 @@ Galleria.run('.galleria', {
 
 $.klAnimate()
 
-window.addEventListener('scroll', () => {
-  showAndHiddenElements()
-})
-
-const elementsAMenu = Array.from(document.getElementsByClassName('linkMenu'))
-const elementsLiMenu = Array.from(document.getElementsByClassName('liNav'))
-const elementsColorTheme = Array.from(document.getElementsByClassName('colorTheme'))
-
-elementsAMenu.forEach(element => {
-  addEventAnimatedStartEnd(element, 'pulse', 'mouseover', 'mouseout')
-})
-
-
-// funciones
-
-function toogleNav() {
-  let navMenu = document.getElementById('navMenu')
-  navMenu.style.display === 'block' ? navMenu.style.display = 'none' : navMenu.style.display = 'block'
-}
-
 function changeLanguage(lan) {
 
   let linkInicio = document.getElementById('linkInicio')
-  linkBiografia = document.getElementById('linkBiografia'),
-  linkGaleria = document.getElementById('linkGaleria'),
-  linkVideos = document.getElementById('linkVideos'),
-  linkAgenda = document.getElementById('linkAgenda'),
-  linkContacto = document.getElementById('linkContacto')
+  let linkBiografia = document.getElementById('linkBiografia')
+  let linkGaleria = document.getElementById('linkGaleria')
+  let linkVideos = document.getElementById('linkVideos')
+  let linkAgenda = document.getElementById('linkAgenda')
+  let linkContacto = document.getElementById('linkContacto')
 
-  titleBiografia = document.getElementById('titleBiografia'),
-  titleGaleria = document.getElementById('titleGaleria'),
-  titleVideos = document.getElementById('titleVideos'),
-  titleAgenda = document.getElementById('titleAgenda'),
-  titleContacto = document.getElementById('titleContacto'),
+  let titleBiografia = document.getElementById('titleBiografia')
+  let titleGaleria = document.getElementById('titleGaleria')
+  let titleVideos = document.getElementById('titleVideos')
+  let titleAgenda = document.getElementById('titleAgenda')
+  let titleContacto = document.getElementById('titleContacto')
 
-  biop1 = document.getElementById('biop1'),
-  biop2 = document.getElementById('biop2'),
-  biop3 = document.getElementById('biop3'),
-  biop4 = document.getElementById('biop4'),
-  biop5 = document.getElementById('biop5'),
+  let biop1 = document.getElementById('biop1')
+  let biop2 = document.getElementById('biop2')
+  let biop3 = document.getElementById('biop3')
+  let biop4 = document.getElementById('biop4')
+  let biop5 = document.getElementById('biop5')
 
-  p1agenda = document.getElementById('p1agenda'),
-  p2agenda = document.getElementById('p2agenda'),
-  p3agenda = document.getElementById('p3agenda'),
+  let p1agenda = document.getElementById('p1agenda')
+  let p2agenda = document.getElementById('p2agenda')
+  let p3agenda = document.getElementById('p3agenda')
 
-  fLinkInicio = document.getElementById('fLinkInicio'),
-  fLinkBiografia = document.getElementById('fLinkBiografia'),
-  fLinkGaleria = document.getElementById('fLinkGaleria'),
-  fLinkVideos = document.getElementById('fLinkVideos'),
-  fLinkAgenda = document.getElementById('fLinkAgenda'),
-  fLinkContacto = document.getElementById('fLinkContacto'),
+  let fLinkInicio = document.getElementById('fLinkInicio')
+  let fLinkBiografia = document.getElementById('fLinkBiografia')
+  let fLinkGaleria = document.getElementById('fLinkGaleria')
+  let fLinkVideos = document.getElementById('fLinkVideos')
+  let fLinkAgenda = document.getElementById('fLinkAgenda')
+  let fLinkContacto = document.getElementById('fLinkContacto')
 
-  fLinkEspa = document.getElementById('fLinkEspa'),
-  fLinkIng = document.getElementById('fLinkIng')
+  let fLinkEspa = document.getElementById('fLinkEspa')
+  let fLinkIng = document.getElementById('fLinkIng')
 
   switch (lan) {
 
@@ -99,8 +84,8 @@ function changeLanguage(lan) {
                              title in guitar with Honors. Guitarists like Carles Trepat, Aniello Desiderio, Carlos Bonell … 
                              have recognized and admired the way they play.`
 
-        // p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
-        // p2agenda.textContent = 'Follow him and find out all his concerts and events.'
+        p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
+        p2agenda.textContent = 'Follow him and find out all his concerts and events.'
         p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
         
         fLinkInicio.textContent = 'Home'
@@ -148,8 +133,8 @@ function changeLanguage(lan) {
                              Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                              de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.`
 
-        // p1agenda.textContent = 'No te pierdas ni un solo concierto de Jonathan Esteve.'
-        // p2agenda.textContent = 'Sigue todos sus proyectos y acontecimientos.'
+        p1agenda.textContent = 'No te pierdas ni un solo consierto de Jonathan Esteve.'
+        p2agenda.textContent = 'Siguelo y entérate de todos sus conciertos y acontecimientos.'
         p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
 
         fLinkInicio.textContent = 'Inicio'
@@ -171,52 +156,11 @@ function backToTop() {
   window.scrollTo(0, 0);
 }
 
-function animateElement(element, animation) {
-
-  if (pageYOffset > (element.offsetTop - element.offsetHeight) - 700 && !Array.from(element.classList).includes('animated')) {
-    element.style.visibility = 'visible'
-    element.classList.add('animated', animation)
-  }
-
-}
-
 function showAndHiddenElements() {
-  
-  let iconBackToTop = document.getElementById('iconBackToTop'),
-  navMenu = document.getElementById('navMenu'),
 
-  titleBiografia =  document.querySelector('#titleBiografia'),
-  imgBiografia =  document.querySelector('#imgBiografia'),
-  biop1 =  document.querySelector('#biop1'),
-  biop2 =  document.querySelector('#biop2'),
-  biop3 =  document.querySelector('#biop3'),
-  biop4 =  document.querySelector('#biop4'),
-  biop5 =  document.querySelector('#biop5'),
-  titleVideos = document.querySelector('#titleVideos'),
-  titleFirstVideo = document.querySelector('#titleFirstVideo'),
-  titleSecondVideo = document.querySelector('#titleSecondVideo'),
-  titleThreeVideo = document.querySelector('#titleThreeVideo'),
-  containerFirstVideo = document.querySelector('#containerFirstVideo'),
-  containerSecondVideo = document.querySelector('#containerSecondVideo'),
-  containerThreeVideo = document.querySelector('#containerThreeVideo'),
-  titleAgenda = document.querySelector('#titleAgenda')
-  
-  animateElement(titleBiografia, 'bounceInDown')
-  animateElement(titleGaleria, 'bounceInDown')
-  animateElement(titleVideos, 'bounceInDown')
-  animateElement(titleAgenda, 'bounceInDown')
-  animateElement(imgBiografia, 'bounceInLeft')
-  animateElement(biop1, 'bounceInRight')
-  animateElement(biop2, 'bounceInLeft')
-  animateElement(biop3, 'bounceInRight')
-  animateElement(biop4, 'bounceInLeft')
-  animateElement(biop5, 'bounceInRight')
-  // animateElement(titleFirstVideo, 'fadeIn')
-  // animateElement(titleSecondVideo, 'fadeIn')
-  // animateElement(titleThreeVideo, 'fadeIn')
-  // animateElement(containerFirstVideo, 'bounceInRight')
-  // animateElement(containerSecondVideo, 'bounceInLeft')
-  // animateElement(containerThreeVideo, 'bounceInRight')
+  let iconBackToTop = document.getElementById('iconBackToTop')
+  let navMenu = document.getElementById('navMenu')
+  let ulNavMenu = document.getElementById('ulNavMenu')
 
   if (pageYOffset < 850) {
     iconBackToTop.style.visibility = 'hidden'
@@ -224,24 +168,24 @@ function showAndHiddenElements() {
     navMenu.style.border = 'none'
     ulNavMenu.style.paddingBottom = '2rem'
     ulNavMenu.style.paddingTop = '3rem'
-    menuHome()
   } else {
     iconBackToTop.style.visibility = 'visible'
     navMenu.style.backgroundColor = 'rgba(0, 0, 0, 0.850)'
     navMenu.style.borderBottom = '1.5px solid white'
     ulNavMenu.style.paddingBottom = '1rem'
     ulNavMenu.style.paddingTop = '1.5rem'
-
-    if (navMenu.style.textAlign === 'left') 
-      menuBody()
   }
 
 }
 
+window.addEventListener('scroll', () => {
+  showAndHiddenElements()
+})
+
 function onImagesLoaded(container, event) {
 
-  let images = container.getElementsByTagName("img"),
-  loaded = images.length
+  let images = container.getElementsByTagName("img")
+  let loaded = images.length
 
   for (let i = 0; i < images.length; i++) {
     if (images[i].complete) {
@@ -266,12 +210,12 @@ function hiddenPantallaBloqueo() {
   document.getElementById('pantallaBloqueo').style.display = 'none'
 }
 
-function showBtnToGetin() {
+function showBtnaToToGetIn() {
 
-  let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo'),
-  h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo'),
-  imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo'),
-  btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
+  let h1PantallaBloqueo = document.getElementById('h1PantallaBloqueo')
+  let h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo')
+  let imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo')
+  let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
 
   h1PantallaBloqueo.style.display = 'none'
   h2PantallaBloqueo.style.display = 'none'
@@ -280,19 +224,16 @@ function showBtnToGetin() {
 
 }
 
-function clickBtnToGetin() {
+function clickBtnaToToGetIn() {
 
-  window.scrollTo(0, 0);
-  menuHome()
   hiddenPantallaBloqueo()
   playAndPauseAudio()
-
 }
 
 function onLoad() {
 
   let container = document.getElementsByTagName("body")[0];
-  onImagesLoaded(container, showBtnToGetin)
+  onImagesLoaded(container, showBtnaToToGetIn)
 
 }
 
@@ -303,8 +244,8 @@ function onClickLink() {
 
 function playAndPauseAudio() {
 
-  let controlAudio = document.getElementById('controlAudio'),
-  audioBg = document.getElementById('audioBg')
+  let controlAudio = document.getElementById('controlAudio')
+  let audioBg = document.getElementById('audioBg')
 
   if(controlAudio.getAttribute('custom-status') === 'pause') {
     controlAudio.setAttribute('src', './assets/icons/icons8-pausa-50.png')
@@ -318,82 +259,4 @@ function playAndPauseAudio() {
 
 }
 
-function addEventAnimatedStartEnd(element, animationValue, eventToAdd, eventToRemove) {
-
-  element.addEventListener(eventToAdd, () => {
-    element.classList.add('animated', animationValue)
-  })
-  element.addEventListener(eventToRemove, () => {
-    element.classList.remove('animated', animationValue)
-  })
-
-}
-
-function menuHome() {
-
-  let navMenu = document.querySelector('#navMenu')
-
-  addStyleToElements(elementsLiMenu, 'marginTop', '5rem')
-
-  if (innerWidth >= 960) {
-    addStyleToElements(elementsAMenu, 'width', '10rem')
-    addStyleToElements(elementsAMenu, 'borderRadius', '3px')
-    addStyleToElements(elementsAMenu, 'padding', '0.5rem 0.5rem 0 0.5rem')
-    addStyleToElements(elementsAMenu, 'textAlign', 'left')
-    addStyleToElements(elementsLiMenu, 'display', 'block')
-    navMenu.style.textAlign = 'left'
-
-    addStyleToElements(elementsAMenu, 'border', '1px solid transparent')
-    addStyleToElements(elementsAMenu, 'backgroundColor', '#2D3440')
-  }
-
-}
-
-function menuBody() {
-
-  let navMenu = document.querySelector('#navMenu')
-  
-  addStyleToElements(elementsLiMenu, 'marginTop', 'initial')
-
-  if (innerWidth >= 960) {
-    addStyleToElements(elementsAMenu, 'width', 'initial')
-    addStyleToElements(elementsAMenu, 'borderRadius', 'none')
-    addStyleToElements(elementsAMenu, 'padding', 'initial')
-    addStyleToElements(elementsAMenu, 'textAlign', 'initial')
-    addStyleToElements(elementsLiMenu, 'display', 'inline')
-    navMenu.style.textAlign = 'center'
-
-    addStyleToElements(elementsAMenu, 'border', 'none')
-    addStyleToElements(elementsAMenu, 'backgroundColor', 'transparent')
-  }
-
-}
-
-function addStyleToElements(elements, style, value) {
-
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].style[style] = value
-  }
-
-}
-
-function changeTheme(deflt, black) {
-
-  let body = document.getElementsByTagName('body')[0],
-  agenda = document.querySelector('#agenda'),
-  contacto = document.querySelector('#contacto'),
-  jEsteveTitle = document.querySelector('#jEsteveTitle')
-
-  if (black) {
-    addStyleToElements([body, agenda, contacto], 'backgroundColor', 'black')
-    addStyleToElements(elementsColorTheme, 'color', '#F5F5F5')
-    jEsteveTitle.style.color = 'black'
-  } else {
-    addStyleToElements([body, agenda, contacto], 'backgroundColor', 'white')
-    addStyleToElements(elementsColorTheme, 'color', '#37474F')
-    jEsteveTitle.style.color = 'white'
-
-  }
-
-}
-
+// alert(window.innerWidth)
