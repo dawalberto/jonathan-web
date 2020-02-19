@@ -46,6 +46,10 @@ function changeLanguage(lan) {
   let fLinkEspa = document.getElementById('fLinkEspa')
   let fLinkIng = document.getElementById('fLinkIng')
 
+  let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
+  let spanPreloadIdiomaEs = document.getElementById('spanPreloadIdiomaEs')
+  let spanPreloadIdiomaIn = document.getElementById('spanPreloadIdiomaIn')
+
   switch (lan) {
 
     case 'en':
@@ -97,6 +101,10 @@ function changeLanguage(lan) {
 
         fLinkEspa.textContent = 'Spanish'
         fLinkIng.textContent = 'English'
+
+        spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Spanish'
+        spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
+        btnPantallaBloqueo.textContent = 'WELCOME'
         break
     case 'es':
         linkInicio.textContent = 'Inicio'
@@ -146,6 +154,10 @@ function changeLanguage(lan) {
 
         fLinkEspa.textContent = 'Español'
         fLinkIng.textContent = 'Inglés'
+
+        spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
+        spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> Inglés'
+        btnPantallaBloqueo.textContent = 'BIENVENIDO'
         break
 
   }
@@ -210,6 +222,7 @@ function hiddenPantallaBloqueo() {
   document.getElementById('pantallaBloqueo').style.opacity = '0'
   setTimeout(() => {
     document.getElementById('pantallaBloqueo').style.display = 'none'
+    document.getElementsByTagName('body')[0].style.overflow = 'inherit'
   }, 700)
 }
 
@@ -219,11 +232,13 @@ function showBtnaToToGetIn() {
   let h2PantallaBloqueo = document.getElementById('h2PantallaBloqueo')
   let imgPantallaBloqueo = document.getElementById('imgPantallaBloqueo')
   let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
+  let idiomaPreload = document.getElementById('idiomaPreload')
 
   h1PantallaBloqueo.style.display = 'none'
   h2PantallaBloqueo.style.display = 'none'
   imgPantallaBloqueo.style.display = 'none'
   btnPantallaBloqueo.style.display = 'block'
+  idiomaPreload.style.display = 'block'
 
 }
 

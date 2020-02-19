@@ -10,14 +10,18 @@
 </head>
 <body onload="onLoad()">
     <div id="pantallaBloqueo">
-        <h1 id="btnPantallaBloqueo" class="btn" onclick="clickBtnaToToGetIn()">ENTRAR</h1>
+        <div id="btnPantallaBloqueo" class="btn" onclick="clickBtnaToToGetIn()">ENTRAR</div>
+        <div id="idiomaPreload">
+            <span id="spanPreloadIdiomaEs" class="btn" onclick="changeLanguage('es')"><img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español</span>
+            <span id="spanPreloadIdiomaIn" class="btn" onclick="changeLanguage('en')"><img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English</span>
+        </div>
         <h1 id="h1PantallaBloqueo">Jonathan Esteve Aranda</h1>
         <img id="imgPantallaBloqueo" src="./assets/icons/icons8-guitar.svg" alt="">
         <h2 id="h2PantallaBloqueo">- Guitarrista Clásico - <br> - Classical Guitarist -</h2>
     </div>
 
-    <img src="./assets/icons/espain.png" class="btn icon-spain" onclick="changeLanguage('es')" alt="">
-    <img src="./assets/icons/reino-unido.png" class="btn icon-uk" onclick="changeLanguage('en')" alt="">
+    <!-- <img src="./assets/icons/espain.png" class="btn icon-spain" onclick="changeLanguage('es')" alt=""> -->
+    <!-- <img src="./assets/icons/reino-unido.png" class="btn icon-uk" onclick="changeLanguage('en')" alt=""> -->
 
     <div class="bgHome" id="inicio">
         <span class="iconMenu" onclick="toogleNav()"><img src="./assets/icons/icons8-guitar.svg" alt=""></span>
@@ -162,7 +166,7 @@
         </div>
     </div>
 
-    <img src="./assets/icons/icons8-slide-up-100.png" id="iconBackToTop" onclick="backToTop()" class="icon-up" alt="">
+    <img src="./assets/icons/icons8-slide-up-100.png" id="iconBackToTop" onclick="backToTop()" class="btn icon-up" alt="">
 
     <!-- Librerias de terceros -->
     <script src="./librerias/jquery-3.4.1.min.js"></script>

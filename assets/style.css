@@ -5,6 +5,7 @@ body {
     margin: 0;
     color: #263238;
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 html {
@@ -62,13 +63,13 @@ html {
     display: block;
     margin-right: 3rem;
     font-size: 2rem;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
     padding: 1rem;
 }
 
 .bgHome nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #fff;
     display: block;
     position: relative;
 }
@@ -79,8 +80,8 @@ html {
     right: 0;
     padding: 1rem;
     cursor: pointer;
-    border-top: 2px white solid;
-    border-right: 2px white solid;
+    border-top: 2px #fff solid;
+    border-right: 2px #fff solid;
     border-top-right-radius: 5px;
     margin: 1rem;
     z-index: 100;
@@ -88,7 +89,7 @@ html {
 }
 
 .iconMenu:hover {
-    border-color: lightslategrey;
+    border-color: #dfe4ea;
 }
 
 .inicioImg img, .agendaImg img, .contactoImg img {
@@ -114,8 +115,8 @@ html {
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
     height: 0;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
 }
 
 .text-center {
@@ -144,7 +145,7 @@ iframe {
 }
 
 .videos h1 {
-    color: white;
+    color: #fff;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -153,7 +154,7 @@ iframe {
 }
 
 .galeria h1 {
-    color: white;
+    color: #fff;
 }
 
 .title {
@@ -166,7 +167,7 @@ iframe {
 }
 
 .agenda, .contacto {
-    background-color: white;
+    background-color: #fff;
 
 }
 
@@ -205,7 +206,7 @@ iframe {
 .contacto div.contacto-grid a {
     justify-self: center;
     font-family: 'Ubuntu', sans-serif;
-    color: gray;
+    color: #a4b0be;
     font-size: 2rem;
     text-decoration: none;
     border-bottom: 1px solid transparent;
@@ -237,14 +238,14 @@ iframe {
     visibility: hidden;
 }
 
-.icon-up:hover {
+/* .icon-up:hover {
     width: 3.3rem;
     height: 3.3rem;
-}
+} */
 
-.icon-spain, .icon-uk {
+/* .icon-spain, .icon-uk {
     position: absolute;
-    top: 0;
+    bottom: 5px;
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -254,14 +255,14 @@ iframe {
 .icon-spain {
     right: initial;
     left: 4rem;
-    filter: brightness(0.9);
+    opacity: .7;
 }
 
 .icon-uk {
     right: initial;
     left: 1rem;
-    filter: brightness(0.9);
-}
+    opacity: .7;
+} */
 
 .btn:hover {
     transform: translateY(-3px);
@@ -286,13 +287,14 @@ iframe {
     text-align: center;
     align-items: center;
 
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(124,124,124,1) 35%, rgba(255,255,255,1) 100%); 
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)) , url(./images/bg.png);
+    background-size: cover;
+    background-position: center;
 
     transition: opacity .6s;
 }
 
-#pantallaBloqueo img {
+#pantallaBloqueo #imgPantallaBloqueo {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -306,13 +308,13 @@ iframe {
 
 #pantallaBloqueo h1 {
     margin-bottom: 5rem;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #pantallaBloqueo h2 {
     margin-top: 5rem;
-    color: white;
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -344,7 +346,7 @@ iframe {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: gray;
+    color: #a4b0be;
     font-size: 2rem;
     margin: 0 2rem 4rem 2rem;
     border-bottom: 1px solid transparent;
@@ -358,7 +360,7 @@ div.titleBgHome {
 }
 
 .titleBgHome h1 {
-    color: white;
+    color: #fff;
     font-size: 4rem;
     text-align: center;
     font-family: 'Ubuntu', sans-serif;
@@ -375,7 +377,7 @@ div.footerGrid {
 
 div.footerGrid a, div.footerGrid p {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
     cursor: pointer;
@@ -387,7 +389,7 @@ div.footerGrid a, div.footerGrid p {
 }
 
 div.footerGrid .pBorder {
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #fff;
 }
 
 div.footerGrid img.iconLenguaje {
@@ -397,7 +399,7 @@ div.footerGrid img.iconLenguaje {
 }
 
 .pCopyright {
-    color: white;
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -423,12 +425,39 @@ div.footerGrid img.iconLenguaje {
     border-radius: 0.2rem;
     letter-spacing: 0.2rem;
     padding: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 25px;
+
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.466);
+
+    transition: opacity .6s;
+}
+
+#idiomaPreload {
+    display: none;
 }
 
 #btnPantallaBloqueo:hover {
-    color: #263238;
-    border: 2px solid #263238;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
+
+#btnPantallaBloqueo:active {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+#pantallaBloqueo span {
+    margin: .5rem;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.icon-idioma-preload {
+    width: 20px;
+    vertical-align: text-top;
+}
+
 
 @media (min-width: 960px) {
 
