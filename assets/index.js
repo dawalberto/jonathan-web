@@ -102,8 +102,8 @@ function changeLanguage(lan) {
         fLinkEspa.textContent = 'Spanish'
         fLinkIng.textContent = 'English'
 
-        spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Spanish'
-        spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
+        // spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
+        // spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
         btnPantallaBloqueo.textContent = 'WELCOME'
         break
     case 'es':
@@ -155,8 +155,8 @@ function changeLanguage(lan) {
         fLinkEspa.textContent = 'Español'
         fLinkIng.textContent = 'Inglés'
 
-        spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
-        spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> Inglés'
+        // spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
+        // spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
         btnPantallaBloqueo.textContent = 'BIENVENIDO'
         break
 
