@@ -32,8 +32,6 @@ function changeLanguage(lan) {
   let biop4 = document.getElementById('biop4')
   let biop5 = document.getElementById('biop5')
 
-  let p1agenda = document.getElementById('p1agenda')
-  let p2agenda = document.getElementById('p2agenda')
   let p3agenda = document.getElementById('p3agenda')
 
   let fLinkInicio = document.getElementById('fLinkInicio')
@@ -42,9 +40,6 @@ function changeLanguage(lan) {
   let fLinkVideos = document.getElementById('fLinkVideos')
   let fLinkAgenda = document.getElementById('fLinkAgenda')
   let fLinkContacto = document.getElementById('fLinkContacto')
-
-  let fLinkEspa = document.getElementById('fLinkEspa')
-  let fLinkIng = document.getElementById('fLinkIng')
 
   let btnPantallaBloqueo = document.getElementById('btnPantallaBloqueo')
   let spanPreloadIdiomaEs = document.getElementById('spanPreloadIdiomaEs')
@@ -88,8 +83,6 @@ function changeLanguage(lan) {
                              title in guitar with Honors. Guitarists like Carles Trepat, Aniello Desiderio, Carlos Bonell … 
                              have recognized and admired the way they play.`
 
-        p1agenda.textContent = "Don't miss a single concert by Jonathan Esteve."
-        p2agenda.textContent = 'Follow him and find out all his concerts and events.'
         p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
         
         fLinkInicio.textContent = 'Home'
@@ -99,8 +92,6 @@ function changeLanguage(lan) {
         fLinkAgenda.textContent = 'Diary'
         fLinkContacto.textContent = 'Contact'
 
-        fLinkEspa.textContent = 'Spanish'
-        fLinkIng.textContent = 'English'
 
         // spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
         // spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
@@ -141,8 +132,6 @@ function changeLanguage(lan) {
                              Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, obtiene el título superior en guitarra con Matrícula 
                              de Honor. Guitarristas como Carles Trepat, Aniello Desiderio, Carlos Bonell… han reconocido y admirado su forma de tocar.`
 
-        p1agenda.textContent = 'No te pierdas ni un solo consierto de Jonathan Esteve.'
-        p2agenda.textContent = 'Siguelo y entérate de todos sus conciertos y acontecimientos.'
         p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
 
         fLinkInicio.textContent = 'Inicio'
@@ -151,9 +140,6 @@ function changeLanguage(lan) {
         fLinkVideos.textContent = 'Videos'
         fLinkAgenda.textContent = 'Agenda'
         fLinkContacto.textContent = 'Contacto'
-
-        fLinkEspa.textContent = 'Español'
-        fLinkIng.textContent = 'Inglés'
 
         // spanPreloadIdiomaEs.innerHTML = '<img src="./assets/icons/espain.png" class="icon-idioma-preload" alt=""> Español'
         // spanPreloadIdiomaIn.innerHTML = '<img src="./assets/icons/reino-unido.png" class="icon-idioma-preload" alt=""> English'
