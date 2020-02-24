@@ -159,8 +159,15 @@ function showAndHiddenElements() {
   let iconBackToTop = document.getElementById('iconBackToTop')
   let navMenu = document.getElementById('navMenu')
   let ulNavMenu = document.getElementById('ulNavMenu')
+  let titleBgHome = document.querySelector('.titleBgHome')
 
-  if (pageYOffset < 850) {
+  if (pageYOffset == 0) {
+    titleBgHome.style.opacity = '1'
+  } else {
+    titleBgHome.style.opacity = '0'
+  }
+
+  if (pageYOffset < 650) {
     iconBackToTop.style.visibility = 'hidden'
     navMenu.style.backgroundColor = 'transparent'
     navMenu.style.border = 'none'
@@ -209,6 +216,7 @@ function hiddenPantallaBloqueo() {
   setTimeout(() => {
     document.getElementById('pantallaBloqueo').style.display = 'none'
     document.getElementsByTagName('body')[0].style.overflow = 'inherit'
+    document.getElementsByTagName('body')[0].style['overflow-x'] = 'hidden'
   }, 700)
 }
 
