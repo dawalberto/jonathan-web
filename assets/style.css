@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Ubuntu&display=swap');
 
 body {
     margin: 0;
@@ -74,6 +73,7 @@ html {
     color: #fff;
     display: block;
     position: relative;
+    padding: 1.5rem;
 }
 
 .iconMenu {
@@ -221,7 +221,7 @@ iframe {
     border-bottom: 1px solid transparent;
 }
 
-.contacto div.contacto-grid a:hover, .agenda a:hover {
+.contacto div.contacto-grid a:hover {
     color: #8BB7F0;
     font-size: 1.3rem;
     border-bottom: 1px solid;
@@ -394,7 +394,7 @@ div.footerGrid a, div.footerGrid p {
     font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -515,6 +515,7 @@ div.footerGrid img.iconLenguaje {
 
     .bgHome nav ul li a {
         display: inline-block;
+        padding: inherit;
     }
 
     a.linkMenu:after {

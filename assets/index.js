@@ -1,6 +1,14 @@
 function toogleNav() {
   let navMenu = document.getElementById('navMenu')
-  navMenu.style.display === 'block' ? navMenu.style.display = 'none' : navMenu.style.display = 'block'
+  let iconMenu = document.getElementById('iconMenu')
+
+  if (navMenu.style.display === 'block') {
+    navMenu.style.display = 'none'
+    iconMenu.src = './assets/icons/icons8-guitar-menu.png'
+  } else {
+    navMenu.style.display = 'block'
+    iconMenu.src = './assets/icons/icons8-guitar-white-menu.png'
+  }
 }
 
 Galleria.loadTheme('librerias/galleria/themes/classic/galleria.classic.min.js')
@@ -244,6 +252,7 @@ function clickBtnaToToGetIn() {
 
 function onLoad() {
 
+  changeLanguageNavigator()
   let container = document.getElementsByTagName("body")[0];
   onImagesLoaded(container, showBtnaToToGetIn)
 
@@ -271,4 +280,15 @@ function playAndPauseAudio() {
 
 }
 
-// alert(window.innerWidth)
+function changeLanguageNavigator() {
+
+  let navigatorL = navigator.language;
+
+  if (navigatorL == 'es-ES' || navigatorL == 'es') {
+    changeLanguage('es')
+  } 
+  
+  if (navigatorL == 'en') { 
+    changeLanguage('en')
+  }
+}

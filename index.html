@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="6VnfNCFfJawNMz_T6NPEM_gKj5oVnsG02leUOasbfoE" />
+    <meta name="description" content="Pagina web oficial del guitarrista clasico Jonathan Esteve Aranda">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
     <title>Jonathan-project</title>
     <link rel="icon" type="image/png" href="./assets/icons/icons8-guitarra-128.png" />
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style-min.css">
 </head>
 <body onload="onLoad()">
     <div id="pantallaBloqueo">
@@ -21,7 +25,7 @@
     </div>
 
     <div class="bgHome" id="inicio">
-        <span class="iconMenu" onclick="toogleNav()"><img src="./assets/icons/icons8-guitar.svg" alt=""></span>
+        <span class="iconMenu" onclick="toogleNav()"><img id="iconMenu" src="./assets/icons/icons8-guitar-menu.png" alt=""></span>
         <nav id="navMenu">
             <ul id="ulNavMenu">
                 <li><a onclick="onClickLink()" id="linkInicio"class="linkMenu" href="#inicio">Inicio</a></li>
@@ -78,6 +82,12 @@
                 <img src="./assets/images/galeria/4-min.jpg" alt="">
                 <img src="./assets/images/galeria/5-min.jpg" alt="">
                 <img src="./assets/images/galeria/6-min.jpg" alt="">
+                <img src="./assets/images/galeria/7-min.jpg" alt="">
+                <img src="./assets/images/galeria/8-min.jpg" alt="">
+                <img src="./assets/images/galeria/9-min.jpg" alt="">
+                <img src="./assets/images/galeria/10-min.jpg" alt="">
+                <img src="./assets/images/galeria/11-min.jpg" alt="">
+                <img src="./assets/images/galeria/12-min.jpg" alt="">
                 <img src="./assets/images/galeria/13-min.jpg" alt="">
             </div>
         </div>
@@ -152,7 +162,7 @@
             <p onclick="changeLanguage('es')" class="btn item-grid-align-center col-4 row-2" href="#"><img class="iconLenguaje" src="./assets/icons/espain.png" alt=""><span id="fLinkEspa">Español</span></p>
             <p onclick="changeLanguage('en')" class="btn item-grid-align-center col-4 row-3" href="#"><img class="iconLenguaje" src="./assets/icons/reino-unido.png" alt=""><span id="fLinkIng">English</span></p>
             <p class="pBorder col-1-4 row-4"></p>
-            <p class="item-grid-align-center pCopyright col-2-3 row-5">© 2019</p>
+            <p class="item-grid-align-center pCopyright col-2-3 row-5">Jonathan Esteve Aranda - © 2019</p>
         </div>
     </div>
 
@@ -165,6 +175,6 @@
     <script src="./librerias/kl-animate/kl-animate.min.js"></script>
     <!-- La mayoría de iconos utilizados son de https://iconos8.es/icons -->
     <!-- Mis scripts -->
-    <script src="./assets/index.js"></script>
+    <script src="./assets/index-min.js"></script>
 </body>
 </html>
