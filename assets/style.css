@@ -73,7 +73,7 @@ html {
     color: #fff;
     display: block;
     position: relative;
-    padding: .5rem;
+    /* padding: .5rem; */
 }
 
 .iconMenu {
@@ -515,7 +515,7 @@ div.footerGrid img.iconLenguaje {
 
     .bgHome nav ul li a {
         display: inline-block;
-        padding: inherit;
+        /* padding: inherit; */
     }
 
     a.linkMenu:after {
