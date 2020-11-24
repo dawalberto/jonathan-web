@@ -69,29 +69,28 @@ function changeLanguage(lan) {
         titleAgenda.textContent = 'Diary'
         titleContacto.textContent = 'Contact and Social networks'
     
-        biop1.textContent = `Winner of the International Angel G. Piñero Classical Guitar Competition 2018 (First Prize) and after having
-                            obtained more than 10 national and international awards in prestigious competitions such as the LI
-                            Francisco Tárrega de Benicàssim International Competition, XVII Benidorm Music Contest among others…
-                            Jonathan Esteve Aranda is currently positioned as one of the most outstanding classical guitarists of his
-                            generation.`
-        biop2.textContent = `His talent, versatility and mastery of the different periods that make up the repertoire for guitar, make him
-                            a musician who plays with a very prominent, defined personality, always linked to a wide technique. His
-                            guitar has played in European countries such as Spain, France, United Kingdom ... Among others, it is
-                            presented in important rooms: Palace of fairs and congresses of Malaga, Arniches Theater, Andrés Gaos
-                            Auditorium, Concha Segura Theater in Spain, St Olave Hart Street ( London-England) Maurice Ravel
-                            Auditorium (France)…`
-        biop3.textContent = `In 2015, he highlights his performance and live recording of the “Concierto de Aranjuez” together with the
-                            Castelar Symphony Orchestra. He has worked and shared the stage with world-renowned directors such as
-                            José Luis Granados, Rafael Vilaplana or Salvador Brotons.`
-        biop4.textContent = `Frequently, he is invited as a concert performer and teacher in important international events: Guitar Fair
-                            of Malaga (2014) XXVIII Benidorm International Music Course, International Andalusian Festival of Saint-
-                            Jean de Luz (France). His initiative to organize events related to the world of guitar, led him to create the
-                            classical guitar contest &quot;Castalla City&quot; of which he is promoter and director.`
-        biop5.textContent = `Jonathan Esteve Aranda was born in Castalla (Alicante-Spain). Formed with the masters Francisco Albert,
-                            Victor Bravo and Antonio Clavel in the conservatories of Villena and Oscar Esplá in Alicante, he obtains the
-                            top degree in guitar with the Honors. Teachers like Carles Trepat, Aniello Desiderio, Carlos Bonell ... have
-                            admired his way of interpreting and understanding music. He plays with a guitar designed and built by him,
-                            self-taught.`
+        biop1.textContent = `First prize in the V International Competition of Classical Guitar Angel G. Piñero 2018, 
+                            Award to the best Spanish guitarist born in the Valencian community in the LI Certamen Internacional Francisco Tárrega 
+                            de Benicássim 2017, Second prize in the XVII International Music Competition of Benidorm 2015, and after having won 
+                            over 10 national and international awards to date... Jonathan Esteve Aranda is currently one of the most outstanding 
+                            guitarists of his generation.`
+        biop2.textContent = `Demonstrating in his concerts versatility, knowledge and mastery of the different periods of the 
+                            repertoire, these are qualities that make him a musician with great personality accompanied by a broad and 
+                            consolidated technique. His guitar has sounded in European countries such as France, Spain, the United Kingdom... 
+                            performing in capitals such as London or Madrid among others. He has played in important venues such as: Carlos de 
+                            Amberes Foundation in Madrid, ADDA Concert Hall in Alicante, Malaga Fair and Congress Center, Pedro Muñoz Seca Theater, 
+                            Andrés Gaos Auditorium, Concha Segura Theater, St Olave Hart Street (London-England) Maurice Ravel Auditorium (France)`
+        biop3.textContent = `His concerts with a symphony orchestra stand out, the first of which took place in 2015, where he 
+                            performed the Aranjuez concert by Joaquín Rodrigo with great success. He has worked and shared the stage with 
+                            world-renowned directors such as José Luis Granados, Rafael Vilaplana or Salvador Brotons.`
+        biop4.textContent = `He is frequently invited as a soloist and teacher in important international events: Guitar Fair 
+                            in Malaga 2014, XXVIII International Course of Music in Benidorm, Andalusian International Festival of Saint-Jean de 
+                            Luz (France). His initiative to organize events related to the world of guitar led him to create the classical guitar 
+                            contest "Ciudad de Castalla" of which he is the director.`
+        biop5.textContent = `Jonathan Esteve was born in Castalla (Alicante-Spain). Formed with the teachers Francisco Albert, 
+                            Victor Bravo and Antonio Clavel in the conservatories of Villena and Oscar Esplá in Alicante, he completed his higher 
+                            studies in guitar with honours. At the same time, he complements his training with guitarists such as Carles Trepat 
+                            and Carlos Bonell.`
 
         p3agenda.textContent = 'On their Facebook page you can find information about their new concerts and other interesting information.'
         
@@ -121,27 +120,28 @@ function changeLanguage(lan) {
         titleAgenda.textContent = 'Agenda'
         titleContacto.textContent = 'Contacto y Redes Sociales'
     
-        biop1.textContent = `Ganador del Concurso Internacional de Guitarra Clásica Ángel G.Piñero 2018 (Primer Premio) y tras haber
-                            obtenido más de 10 premios nacionales e internacionales en prestigiosos concursos como el LI Certamen
-                            Internacional Francisco Tárrega de Benicàssim, XVII Concurso de música de Benidorm entre otros…
-                            Jonathan Esteve Aranda se sitúa actualmente como uno de los guitarristas clásicos más destacados de su generación.`
-        biop2.textContent = `Su talento, versatilidad y dominio de los diferentes periodos que componen el repertorio para guitarra, lo
-                            convierten en un músico que toca con una personalidad muy destacada, definida, ligada siempre a una
-                            amplia técnica. Su guitarra ha sonado en países Europeos como España, Francia, Reino Unido…Entre otras,
-                            se presenta en importantes salas: Palacio de ferias y congresos de Málaga, Teatro Arniches, Auditorio
-                            Andrés Gaos, Teatro Concha Segura en España, St Olave Hart Street (Londres-Inglaterra) Auditorio Maurice Ravel (Francia)…`
-        biop3.textContent = `En 2015, destaca su interpretación y grabación en directo del “Concierto de Aranjuez” junto con la
-                            Orquesta sinfónica Castelar. Ha trabajado y compartido escenario con directores de renombre mundial
-                            como José Luis Granados, Rafael Vilaplana o Salvador Brotons.`
-        biop4.textContent = `Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: Guitar Fair
-                            de Málaga (2014) XXVIII Curso Internacional de Música de Benidorm, Festival internacional andaluz de
-                            Saint-Jean de Luz (Francia). Su iniciativa para organizar eventos relacionados con el mundo de la guitarra, le
-                            llevan a crear el Certamen de guitarra clásica “Ciudad de Castalla” del cual es promotor y director.`
-        biop5.textContent = `Jonathan Esteve Aranda nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert,
-                            Victor Bravo y Antonio Clavel en los conservatorios de Villena y Oscar Esplá de Alicante, obtiene el título
-                            superior en guitarra con Matrícula de Honor. Maestros como Carles Trepat, Aniello Desiderio, Carlos
-                            Bonell… han admirado su forma de interpretar y entender la música. Toca con una guitarra diseñada y
-                            construida por el mismo, de forma autodidacta.`
+        biop1.textContent = `Primer premio en el V Concurso Internacional de Guitarra Clásica Ángel G. Piñero 2018, Premio al 
+                            mejor guitarrista español nacido en la comunidad valenciana en el LI Certamen Internacional Francisco Tárrega de 
+                            Benicássim 2017, Segundo Premio en el XVII Concurso Internacional de Música de Benidorm 2015, y tras haber obtenido 
+                            hasta la fecha más de 10 premios nacionales e internacionales…Jonathan Esteve Aranda se sitúa actualmente como uno 
+                            de los guitarristas más destacados de su generación.`
+        biop2.textContent = `Demostrando en sus conciertos versatilidad, conocimiento y dominio de los diferentes periodos del 
+                            repertorio, son cualidades que hacen de él un músico con gran personalidad acompañada de una amplia y consolidada 
+                            técnica. Su guitarra, ha sonado en países Europeos como Francia, España, Reino Unido…presentándose en capitales cómo 
+                            Lóndres o Madrid entre otras. Ha tocado en importantes salas cómo: Fundación Carlos de Amberes en Madrid, ADDA 
+                            Concert Hall de Alicante, Palacio de ferias y congresos de Málaga, Teatro Pedro Muñoz Seca, Auditorio Andrés Gaos, 
+                            Teatro Concha Segura, St Olave Hart Street (Londres-Inglaterra) Auditorio Maurice Ravel (Francia)… `
+        biop3.textContent = `Destacan sus conciertos con orquesta sinfónica, teniendo lugar el primero de ellos en el año 2015, 
+                            donde interpretó con gran éxito el concierto de Aranjuez de Joaquín Rodrigo. Ha trabajado y compartido escenario con 
+                            directores de renombre mundial como José Luis Granados, Rafael Vilaplana o Salvador Brotons.`
+        biop4.textContent = `Frecuentemente, es invitado como concertista y profesor en importantes citas internacionales: 
+                            Guitar Fair de Málaga 2014, XXVIII Curso Internacional de Música de Benidorm, Festival internacional andaluz de 
+                            Saint-Jean de Luz (Francia). Su iniciativa para organizar eventos relacionados con el mundo de la guitarra, le llevan 
+                            a crear el certamen de guitarra clásica “Ciudad de Castalla” del cual es director.`
+        biop5.textContent = `Jonathan Esteve nace en Castalla (Alicante-España). Formado con los maestros Francisco Albert, 
+                            Victor Bravo y Antonio Clavel en los conservatorios de Villena y Oscar Esplá en Alicante, completa los estudios 
+                            superiores en guitarra con Matrícula de Honor. Paralelamente complementa su formación con guitarristas cómo 
+                            Carles Trepat y Carlos Bonell.`
 
         p3agenda.textContent = 'En su página de Facebook podrás encontrar información a cerca de sus nuevos conciertos y otros datos de interés.'
 
