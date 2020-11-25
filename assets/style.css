@@ -110,7 +110,7 @@ html {
     max-width: 1920px;
     font-size: 1.3em;
     font-family: 'Ubuntu', sans-serif;
-    text-align: justify;
+    text-align: left;
     margin: 0 auto;
 }
 
@@ -479,6 +479,10 @@ div.footerGrid img.iconLenguaje {
 
 
 @media (min-width: 960px) {
+
+    #biografia {
+        text-align: justify;
+    }
 
     #pantallaBloqueo {
         background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8)) , url(./images/bg.png);
